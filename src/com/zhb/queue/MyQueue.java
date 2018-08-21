@@ -56,13 +56,13 @@ public class MyQueue {
     }
     public static void main(String[] args) {
     	MyQueue p = new MyQueue();
-    	p.push(1);//stack1---//1
-    	System.out.println(p.pop());//stack2---//1//stack1---//null
+    	p.push(1);//s1[1],s2[]---->pop()
+    	System.out.println(p.pop());//s1[],s[2]---(return s2.pop()---[1])---->s11[],s2[]------>push(2),push(3)
     	
-    	p.push(2);//stack1---//2
-    	p.push(3);//stack1---//2,3
-    	System.out.println(p.top());//stack2---//1
-    	System.out.println(p.pop());//stack2---//3
+    	p.push(2);//
+    	p.push(3);//s1[2,3],s2[]----->top()
+    	System.out.println(p.top());//s1[2],s2[3]---->s1[],s2[3,2]--return s2.peek()--[2]-->s1[],s2[3,2]-->pop()
+    	System.out.println(p.pop());//s1[],s2[3,2]----->return s2.pop()---[2]----end---。
     	
 	}
 }
