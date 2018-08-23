@@ -13,7 +13,13 @@ import javax.swing.tree.TreeNode;
 public class Solution {
 	private Queue<Integer> queue = new ArrayDeque<Integer>();
 	public List<List<Integer>> levelOrder(TreeNode root) {
-		
+
 		return null;
 	}
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        System.out.println(solution.queue.add(1));
+    }
 }
