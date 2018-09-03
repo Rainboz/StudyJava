@@ -1,10 +1,9 @@
 package com.zhb.queue;
 
+import javax.swing.tree.TreeNode;
 import java.util.ArrayDeque;
 import java.util.List;
 import java.util.Queue;
-
-import javax.swing.tree.TreeNode;
 
 /**
  * @author Rainboz E-mail:784269332@qq.com
@@ -13,7 +12,12 @@ import javax.swing.tree.TreeNode;
 public class Solution {
 	private Queue<Integer> queue = new ArrayDeque<Integer>();
 	public List<List<Integer>> levelOrder(TreeNode root) {
-		
-		return null;
+		List<List<Integer>> vList = null;
+		traver(root, 1, vList);
+		return vList;
+	}
+	public void traver(TreeNode root,int level,List<List<Integer>> vList){
+		if(root==null) return;
+        
 	}
 }
