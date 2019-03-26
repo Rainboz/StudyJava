@@ -2,17 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d000db5-8ba4-4108-8070-6bddb0a58897" name="Default" comment="20190324 javase学习">
-      <change afterPath="$PROJECT_DIR$/src/com/zhb/LintCode/migong787/Migong.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhb/LintCode/sushu/Sushu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhb/main/LinkedAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhb/main/susu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudyJava.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/Arrays/Array1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/Arrays/Arrays2add.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/HeadFirst/Drumkit43.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/HeadFirst/EchoTestDrive44.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/LintCode/migong787/Migong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/LintCode/sushu/Sushu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/Obj/Gem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/Thread/ConditionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/Thread/MyObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/Thread/ThreadSpead.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/Thread/TwoThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/45.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/aaa.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/images/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/images/list_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/images/list_w.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/js/echarts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/js/echarts.simple.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/queue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/javaSE/Stu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/javaSE/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/DateMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/HelloDate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/LinkedAdd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/Solution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/susu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/tongji.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/queue/MyQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zhb/queue/Solution.java" beforeDir="false" />
     </list>
     <ignored path="StudyJava.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,82 +71,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/main/susu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/LintCode/sushu/Sushu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/main/LinkedAdd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/HeadFirst/Drumkit43.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Array1.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Arrays2add.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Student.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Stu.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/AccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/HeadFirst/EchoTestDrive44.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/ConditionTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="154">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#85#86#0" expanded="true" />
+                <element signature="e#131#132#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,6 +89,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Arquillian JUnit Test Class" />
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -157,10 +125,37 @@
         <option value="$PROJECT_DIR$/src/com/zhb/Arrays/Arrays2add.java" />
         <option value="$PROJECT_DIR$/src/com/zhb/javaSE/Student.java" />
         <option value="$PROJECT_DIR$/src/com/zhb/javaSE/Stu.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/Arrays/Pritimive.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/Arrays/Person.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/Obj/Person.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/Obj/Circle.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/Obj/Overload.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/Car.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/Demo.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/TestA.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/Value.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/String.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/StringObj.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/Qww.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/t14/Vehicle.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/T15/Hero.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/T16/Computer.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/T17/Person.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/T19/WuMingFen.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/T20/MyTime.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/test/com/zhb/javaSE/Tjc/AccountTest.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/redis/redisClient.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/javaSE/Tjc/Account.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/test/com/zhb/AccountTest.java" />
+        <option value="$PROJECT_DIR$/src/com/zhb/test/AccountTest.kt" />
+        <option value="$PROJECT_DIR$/src/com/zhb/test/AccountTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -187,21 +182,48 @@
               <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="zhb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="zhb" type="462c0819:PsiDirectoryNode" />
-              <item name="HeadFirst" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="zhb" type="462c0819:PsiDirectoryNode" />
               <item name="javaSE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -217,19 +239,38 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553406990526" />
-    <property name="last_opened_file_path" value="E:/tools/Git/bin/git.exe" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553578586567" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="D:/study/jedis-3.0.1.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.zhb" />
+      <recent name="com.zhb.javaSE.Tjc" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\study\java\workspace\StudyJava\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zhb.javaSE" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\study\java\workspace\StudyJava\src\com\zhb\Arrays" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zhb.Arrays" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -244,7 +285,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Drumkit43$DrumkTestDrive">
+  <component name="RunManager" selected="Application.ThreadSpead">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -337,13 +378,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Drumkit43$DrumkTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhb.HeadFirst.Drumkit43$DrumkTestDrive" />
+    <configuration name="Car" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhb.javaSE.Car" />
       <module name="StudyJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zhb.HeadFirst.*" />
+          <option name="PATTERN" value="com.zhb.javaSE.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -351,22 +392,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EchoTestDrive44" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhb.HeadFirst.EchoTestDrive44" />
-      <module name="StudyJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhb.HeadFirst.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhb.Thread.MyObject" />
+    <configuration name="ThreadSpead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhb.Thread.ThreadSpead" />
       <module name="StudyJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -379,36 +406,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sushu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhb.LintCode.sushu.Sushu" />
-      <module name="StudyJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhb.LintCode.sushu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="susu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhb.main.susu" />
-      <module name="StudyJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhb.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -450,6 +449,53 @@
       <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method v="2" />
+    </configuration>
+    <configuration name="AccountTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StudyJava" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StudyJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhb" />
+      <option name="MAIN_CLASS_NAME" value="com.zhb.AccountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StudyJava" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest.testMe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StudyJava" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccountTest" />
+      <option name="METHOD_NAME" value="testMe" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -520,19 +566,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.MyObject" />
-      <item itemvalue="Application.susu" />
-      <item itemvalue="Application.Sushu" />
-      <item itemvalue="Application.Drumkit43$DrumkTestDrive" />
-      <item itemvalue="Application.EchoTestDrive44" />
+      <item itemvalue="Application.Car" />
+      <item itemvalue="Application.ThreadSpead" />
+      <item itemvalue="JUnit.AccountTest" />
+      <item itemvalue="JUnit.AccountTest.testMe" />
+      <item itemvalue="JUnit.AccountTest (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Drumkit43$DrumkTestDrive" />
-        <item itemvalue="Application.EchoTestDrive44" />
-        <item itemvalue="Application.Sushu" />
-        <item itemvalue="Application.susu" />
-        <item itemvalue="Application.MyObject" />
+        <item itemvalue="Application.ThreadSpead" />
+        <item itemvalue="JUnit.AccountTest (1)" />
+        <item itemvalue="JUnit.AccountTest.testMe" />
+        <item itemvalue="Application.Car" />
+        <item itemvalue="JUnit.AccountTest" />
       </list>
     </recent_temporary>
   </component>
@@ -548,39 +594,60 @@
       <updated>1535939352147</updated>
       <workItem from="1535939360902" duration="11570000" />
       <workItem from="1535962568821" duration="4689000" />
-      <workItem from="1553406025829" duration="791000" />
+      <workItem from="1553406025829" duration="5501000" />
+      <workItem from="1553413464962" duration="5596000" />
+      <workItem from="1553476131643" duration="5190000" />
+      <workItem from="1553481886609" duration="4240000" />
+      <workItem from="1553492759596" duration="12435000" />
+      <workItem from="1553562622315" duration="4521000" />
+      <workItem from="1553570372722" duration="1336000" />
+      <workItem from="1553571760859" duration="994000" />
+      <workItem from="1553574851634" duration="1091000" />
+      <workItem from="1553580416445" duration="628000" />
     </task>
+    <task id="LOCAL-00001" summary="20190324 javase学习">
+      <created>1553406957490</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553406957490</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="AccountTest_(1) - 2019.03.26 at 13h 36m 19s.xml">
+      <configuration name="AccountTest (1)" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17050000" />
+    <option name="totallyTimeSpent" value="57791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18305598" />
-      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.204236" />
+      <window_info id="Structure" order="1" weight="0.25340393" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Palette&#9;" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23442623" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.23442623" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.21967213" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="11" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Thumbnails" order="14" weight="0.3295082" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -591,6 +658,7 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="Maven" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,6 +697,168 @@
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/Obj/Person.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/Obj/Person.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/Obj/Person.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/Obj/Overload.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/Obj/Overload.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Demo.java</url>
+          <line>5</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Demo.java</url>
+          <line>6</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Demo.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Value.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Value.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Value.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Value.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java</url>
+          <line>6</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java</url>
+          <line>5</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java</url>
+          <line>10</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Qww.java</url>
+          <line>6</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Qww.java</url>
+          <line>7</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/Qww.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/T15/Hero.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/T15/Hero.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/T15/Hero.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/T17/Person.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zhb/javaSE/T17/Person.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -646,128 +876,109 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/queue/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/queue/Solution.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/util/concurrent/ArrayBlockingQueue.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Thread.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Runnable.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/queue/MyQueue.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/queue/MyQueue.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Obj/Gem.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/TwoThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/ThreadSpead.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/MyObject.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/LintCode/migong787/Migong.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/ConditionTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Student.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Stu.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/main/LinkedAdd.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/LintCode/sushu/Sushu.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/main/susu.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/HeadFirst/Drumkit43.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/HeadFirst/EchoTestDrive44.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Pritimive.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Arrays2add.java" />
+    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="141">
+          <caret line="3282" column="45" selection-start-line="3282" selection-start-column="37" selection-end-line="3282" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/Obj/Gem.java">
+    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="492" column="30" selection-start-line="492" selection-start-column="30" selection-end-line="492" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Obj/Person.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Obj/Circle.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Obj/Overload.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Array1.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Car.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Demo.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/TestA.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/StringObj.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/MainTest.java" />
+    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Value.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/test/com/zhb/javaSE/Tjc/AccountTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Qww.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/t14/Vehicle.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/T15/Hero.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/T16/Computer.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/redis/redisClient.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/T17/Person.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/T19/WuMingFen.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/T20/MyTime.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/test/com/zhb/AccountTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/test/AccountTest.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Tjc/Account.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/TwoThread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhb/javaSE/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="242">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhb/Thread/ThreadSpead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/ThreadSpead.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/AccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="154">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#85#86#0" expanded="true" />
+            <element signature="e#131#132#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/MyObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/LintCode/migong787/Migong.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/main/susu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/LintCode/sushu/Sushu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/main/LinkedAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/HeadFirst/EchoTestDrive44.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/Thread/ConditionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/HeadFirst/Drumkit43.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Array1.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Arrays2add.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Student.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Stu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -828,6 +1039,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -847,6 +1059,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: junit:junit:4.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
