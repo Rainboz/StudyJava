@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d000db5-8ba4-4108-8070-6bddb0a58897" name="Default" comment="20190324 javase学习">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AccountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudyJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudyJava.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/Arrays/Array1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/Arrays/Arrays2add.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/HeadFirst/Drumkit43.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/HeadFirst/EchoTestDrive44.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/LintCode/migong787/Migong.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/LintCode/sushu/Sushu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/Obj/Gem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/Thread/ConditionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/Thread/MyObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/Thread/ThreadSpead.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/Thread/TwoThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/45.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/aaa.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/all.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/images/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/images/list_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/images/list_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/js/echarts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/js/echarts.simple.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/html/queue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/javaSE/Stu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/javaSE/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/DateMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/HelloDate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/LinkedAdd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/Solution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/susu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/main/tongji.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/queue/MyQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhb/queue/Solution.java" beforeDir="false" />
-    </list>
+    <list default="true" id="3d000db5-8ba4-4108-8070-6bddb0a58897" name="Default" comment="20190324 javase学习" />
     <ignored path="StudyJava.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -74,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="75">
+              <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
               <folding>
                 <element signature="e#85#86#0" expanded="true" />
                 <element signature="e#131#132#0" expanded="true" />
@@ -165,7 +126,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,36 +137,6 @@
               <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zhb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zhb" type="462c0819:PsiDirectoryNode" />
-              <item name="javaSE" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StudyJava" type="b2602c69:ProjectViewProjectNode" />
@@ -230,6 +160,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,17 +168,18 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553578586567" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="D:/study/jedis-3.0.1.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -286,43 +218,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.ThreadSpead">
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -371,6 +266,61 @@
       <properties />
       <listeners />
       <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType">
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType">
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -604,6 +554,7 @@
       <workItem from="1553571760859" duration="994000" />
       <workItem from="1553574851634" duration="1091000" />
       <workItem from="1553580416445" duration="628000" />
+      <workItem from="1554218188333" duration="193000" />
     </task>
     <task id="LOCAL-00001" summary="20190324 javase学习">
       <created>1553406957490</created>
@@ -621,12 +572,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57791000" />
+    <option name="totallyTimeSpent" value="57984000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.204236" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20783374" />
       <window_info id="Structure" order="1" weight="0.25340393" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -896,27 +848,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/zhb/HeadFirst/EchoTestDrive44.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Pritimive.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/Arrays/Arrays2add.java" />
-    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="3282" column="45" selection-start-line="3282" selection-start-column="37" selection-end-line="3282" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="492" column="30" selection-start-line="492" selection-start-column="30" selection-end-line="492" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/util/Arrays.java" />
+    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/System.java" />
+    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/Object.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/Obj/Person.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/Obj/Circle.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/Obj/Overload.java" />
@@ -926,13 +860,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/TestA.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/StringObj.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/MainTest.java" />
-    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/Override.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://E:/Program Files/java/jdk1.8.0_144/src.zip!/java/lang/Override.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/Value.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/test/com/zhb/javaSE/Tjc/AccountTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/zhb/javaSE/TestArgValue.java" />
@@ -954,27 +882,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhb/javaSE/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhb/Thread/ThreadSpead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhb/javaSE/Car.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhb/Thread/ThreadSpead.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/AccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="75">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
           <folding>
             <element signature="e#85#86#0" expanded="true" />
             <element signature="e#131#132#0" expanded="true" />
@@ -1039,7 +952,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
