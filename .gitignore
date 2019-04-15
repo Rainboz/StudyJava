@@ -30,4 +30,13 @@ out
 gen
 build
 doc/*.txt
-
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+# ignore eclipse files
+.project
+.classpath
+.settings
+.metadata
+.svn
+# IntelliJ
+/out/
