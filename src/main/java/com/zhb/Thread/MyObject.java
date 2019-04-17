@@ -7,16 +7,16 @@ package com.zhb.Thread;
  * @create: 2018-09-03 17:19
  */
 public class MyObject {
-    synchronized public void mA(){
+    private synchronized void mA(){
         System.out.println("MA");
     }
-    synchronized public void mB(){
+    private synchronized void mB(){
         System.out.println("MB");
     }
     public static class ThreadA extends Thread{
         private MyObject myObject;
 
-        public ThreadA(MyObject myObject) {
+        ThreadA(MyObject myObject) {
         }
 
         @Override
@@ -28,7 +28,7 @@ public class MyObject {
     public static class ThreadB extends Thread{
         private MyObject myObject;
 
-        public ThreadB(MyObject myObject) {
+        ThreadB(MyObject myObject) {
 
         }
 

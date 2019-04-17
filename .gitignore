@@ -40,3 +40,8 @@ doc/*.txt
 .svn
 # IntelliJ
 /out/
+/.gitignore
+将删除 src/main/java/com/zhb/javaSE/package201904/javaGc/
+将删除 target/generated-sources/
+将删除 target/generated-test-sources/
+stage/cached

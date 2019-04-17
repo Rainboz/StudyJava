@@ -1,12 +1,12 @@
 package com.zhb.javaSE;
 
 public class TestA {
-    int i ;
-    void change(int i){
+    private int i ;
+    private void change(int i){
         i++;
         System.out.println(i);
     }
-    void change1(TestA t){
+    private void change1(TestA t){
         t.i++;
         System.out.println(t.i);
     }

@@ -1,13 +1,14 @@
 package com.zhb.javaSE.t14;
 
 public class Vehicle {
+
     private int speed;
     private int size;
 
     public Vehicle() {
     }
 
-    public Vehicle(int speed, int size) {
+   public Vehicle(int speed, int size) {
         this.speed = speed;
         this.size = size;
     }

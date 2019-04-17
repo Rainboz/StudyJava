@@ -1,7 +1,7 @@
 package com.zhb.Thread;
 
-/**
- * @program: StudyJava
+/*
+  @program: StudyJava
  * @description: ${description}
  * @author: ls
  * @create: 2018-09-03 15:29
@@ -59,6 +59,7 @@ public class ConditionTest {
                 try {
                     put();
                 } catch (InterruptedException e) {
+                    System.out.println("catch");
                 }
             }
         }
@@ -72,6 +73,7 @@ public class ConditionTest {
                     get();
                     //Thread.sleep(2000);
                 } catch (InterruptedException e) {
+                    System.out.println("catch");
                 }
             }
         }
