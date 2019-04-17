@@ -5,6 +5,7 @@ public class Array1 {
         Pritimive d = new Pritimive();
         for (int i = 0; i < d.t.length; i++) {
             System.out.println(d.t[i]);
+            System.out.println(d.t.clone()[i]);
         }
     }
 
