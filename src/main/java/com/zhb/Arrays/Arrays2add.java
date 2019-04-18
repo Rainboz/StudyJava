@@ -20,7 +20,7 @@ public class Arrays2add {
         int a[] = new int[b];
         int a2[] = new int[b+1];
         for (int i = 0; i < b; i++) {
-            System.out.println("输入"+b+"个整数");
+            System.out.println("输入第"+(i+1)+"个整数");
             int c = sc1.nextInt();
             a[i] = c;
         }

@@ -1,4 +1,4 @@
-package com.zhb.javaSE.package201904.packge06;
+package com.zhb.javaSE.package201904.package06;
 
 import java.util.Scanner;
 
