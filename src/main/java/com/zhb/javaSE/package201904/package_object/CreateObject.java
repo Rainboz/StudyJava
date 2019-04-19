@@ -34,6 +34,7 @@ public class CreateObject {
         person1 = (Person) obj;
         person1.setAge(544);
         person1.setName("活神仙");
+        person1.setSex("女");
         person1.display();
         System.out.println(person1.toString());
     }
@@ -50,8 +51,8 @@ public class CreateObject {
     public static void createobj2() throws Exception {
         Class classType = Person.class;
         System.out.println(classType + " classType");
-        Constructor<Person> con = classType.getConstructor(String.class, int.class);//int.class?
-        Object obj = con.newInstance("祝海波 ", 23);//（里面的参数歌数对应该对象的构造方法）
+        Constructor<Person> con = classType.getConstructor(String.class, int.class ,String.class);//该对象构造函数的参数个数
+        Object obj = con.newInstance("祝海波 ", 23,"男");//（里面的参数歌数对应该对象的构造方法）
         System.out.println("使用constructor对象的newInstance()方法创建对象的信息：" + ((Person) obj).toString());
     }
 

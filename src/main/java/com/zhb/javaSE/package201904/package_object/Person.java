@@ -10,6 +10,7 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", sex=" + sex +
                 '}';
     }
 
@@ -21,7 +22,12 @@ public class Person {
         this.age = age;
         display();
     }
-
+    public Person(String name, int age, String sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        display();
+    }
     public String getName() {
         return name;
     }
@@ -38,8 +44,16 @@ public class Person {
         this.age = age;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     public void display() {
-        System.out.println(name + "的年龄" + age);
+        System.out.println(name + "的年龄" + age+" 性别："+sex);
     }
     public void study(){
         System.out.println("Studying");
