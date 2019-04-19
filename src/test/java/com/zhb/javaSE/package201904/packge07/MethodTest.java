@@ -1,8 +1,7 @@
 package com.zhb.javaSE.package201904.packge07;
 
+import com.zhb.javaSE.package201904.package07.Method;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class MethodTest {
     Method method = new Method();
