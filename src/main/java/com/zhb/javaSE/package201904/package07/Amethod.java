@@ -1,4 +1,4 @@
-package com.zhb.javaSE.package201904.packge07;
+package com.zhb.javaSE.package201904.package07;
 
 import java.util.Arrays;
 
