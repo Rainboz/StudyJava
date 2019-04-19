@@ -6,7 +6,7 @@ package com.zhb.javaSE.package201904.package06;
  * @author: rainboz
  * @create: 2019-04-18 20:07
  **/
-public class Rabbit {
+public class Rabbit{
 
         public static void main(String[] args) {
             System.out.println("第1个月的兔子对数:    1");
