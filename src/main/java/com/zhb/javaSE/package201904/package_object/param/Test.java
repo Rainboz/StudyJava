@@ -7,5 +7,5 @@ package com.zhb.javaSE.package201904.package_object.param;
  * @create: 2019-04-19 16:10
  **/
 public class Test {
-    
+
 }
