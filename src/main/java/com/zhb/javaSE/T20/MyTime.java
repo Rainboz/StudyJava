@@ -13,7 +13,7 @@ public class MyTime {
 
     public MyTime() {
     }
-    public void disply(){
+    public void dispaly(){
 
     }
     void addSecond(int sec){}
