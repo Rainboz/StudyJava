@@ -1,20 +1,36 @@
 package com.zhb.javaSE.banking;
 
+import java.util.Arrays;
+
 public class Bank {
     private Customer customers[];
-    private int numberOfCustomer;
+    private int numberOfCustomers = 0;
 
     public Bank() {
     }
-    public void addCustomer(String firstName,String LastName){
+
+    public Bank(Customer[] customers) {
 
     }
 
-    public Customer[] getCustomers() {
-        return customers;
+    public void addCustomer(String firstName, String lastName) {
+        Customer customer = new Customer();
+        customer.setFirstName(firstName);
+        customer.setLastName(lastName);
+        customers = new Customer[5];
+        for (int i = 0; i < customers.length; i++) {
+            customers[i] = customer;
+        }
+        numberOfCustomers++;//导致用户和数组下标倒置
+        //System.out.println("Customer["+numberOfCustomers+"]is "+firstName+","+lastName);
     }
 
-    public int getNumberOfCustomer() {
-        return numberOfCustomer;
+    public int getNumberOfCustomers() {
+
+        return numberOfCustomers;
+    }
+
+    public Customer getCustomer(int index) {
+        return customers[index];
     }
 }

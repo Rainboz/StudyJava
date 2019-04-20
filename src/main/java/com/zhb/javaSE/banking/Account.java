@@ -1,13 +1,14 @@
 package com.zhb.javaSE.banking;
 
 public class Account {
-    private double balance;
+    protected double balance;
 
     public Account() {
     }
 
     public Account(double balance) {
-        System.out.println("Creating an account with a "+String.format("%.2f",balance)+" balance");
+        super();
+        //System.out.println("Creating an account with a " + String.format("%.2f", balance) + " balance");
         this.balance = balance;
     }
 
@@ -16,24 +17,28 @@ public class Account {
     }
 
     public double getBalance() {
-        System.out.println("The account has a balance of  "+String.format("%.2f",balance));
+        //System.out.println("The account has a balance of  "+String.format("%.2f",balance));
         return balance;
     }
 
-    public boolean deposit(double amt ){
+    public boolean deposit(double amt) {
+        boolean flag = true;
         balance += amt;
-        System.out.println("Deposit  "+String.format("%.2f",amt));
+        System.out.println("Deposit  " + String.format("%.2f", amt) + ":" + flag);
         return true;
     }
-    public boolean withdraw(double amt){
 
-        if (balance >= amt){
+    public boolean withdraw(double amt) {
+        boolean flag = false;
+        if (balance >= amt) {
             balance -= amt;
-            System.out.println("Withdraw "+String.format("%.2f",amt));
+            flag = true;
+            System.out.println("Withdraw " + String.format("%.2f", amt) + ":" + flag);
             return true;
-        }else {
-            System.out.println("余额不足！");
+        } else {
+            System.out.println("Withdraw " + String.format("%.2f", amt) + ":" + flag);
         }
         return false;
     }
+
 }
