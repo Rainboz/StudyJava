@@ -18,6 +18,7 @@ public class User {
     }
 
     public User() {
+
     }
 
     public String getID() {
@@ -52,4 +53,6 @@ public class User {
                 ", e_mail='" + e_mail + '\'' +
                 '}';
     }
+
+
 }

@@ -19,5 +19,15 @@ public class Atest {
         }
 
         System.out.println();
+        Animal animal2 = new Cat();
+        animal2.eat();
+        animal2.run2();
+        animal2.run3();
+        animal2.run();
+        //animal2.eat("444");父类不不能用子类独有的方法
+        Cat cat = new Cat();
+        cat.run2(2);
+        cat.run();
+        cat.eat();
     }
 }
