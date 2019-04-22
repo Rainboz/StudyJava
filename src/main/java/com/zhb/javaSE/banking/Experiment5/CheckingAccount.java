@@ -34,13 +34,18 @@ public class CheckingAccount extends Account {
             flag = true;
             System.out.println("Withdraw " + String.format("%.2f", amt) + ":" + flag);
             return true;
-        } else if (overdraftProtection > 0) {//怎么判断存在透支保护
-            overdraftProtection = balance - amt;
-            flag = true;
-            System.out.println("Withdraw " + String.format("%.2f", amt) + ":" + flag);
-        } else {
-            flag = false;
-            System.out.println("Creating his Checking Account with a " + String.format("%.2f", balance) + " balance and no overdraft protection.");
+        }
+        if (amt > balance) {//怎么判断存在透支保护
+            if (overdraftProtection >= Math.sqrt(balance - amt)){
+                flag = true;
+                this.balance = 0;
+                overdraftProtection -= Math.sqrt(balance - amt);//冲减可透支金额
+                System.out.println("Withdraw " + String.format("%.2f", amt) + ":" + flag);
+            }else {
+                flag = false;
+                System.out.println("Creating his Checking Account with a " +
+                        String.format("%.2f", balance) + " balance and no overdraft protection.");
+            }
         }
         return flag;
     }
