@@ -16,7 +16,7 @@ import java.lang.reflect.Constructor;
  * 2、使用Class对象获取指定的Constructor对象，调用Constructor对象的newInstance()方法
  * 来获取来创建该Class的实例，这样可以根据参数类型来指定使用哪个构造器。
  */
-public class CreateObject {
+public class CreateObject extends Object{
     /**
      * 创建Class对象的方式一：返回与带有给定字符串的类或接口相关联的Class对象
      * (forName():传入时只需要以字符串的方式传入即可)
@@ -72,10 +72,12 @@ public class CreateObject {
         String s3 = new String("s");
         String s4 = "s";
         String s5 = s3 + s4;
+
 //        System.out.println("s == s1:"+(s == s1));
 //        System.out.println("s1 == s2:"+(s1 == s2));
 //        System.out.println("s3 == s5："+(s3 == s5));
         System.out.println(s == s1);
+        System.out.println(s.equals(s1));
         System.out.println(s == s2);
         System.out.println(s == s3);
         System.out.println(s == s4);

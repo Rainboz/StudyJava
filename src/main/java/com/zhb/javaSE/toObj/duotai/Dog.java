@@ -20,4 +20,8 @@ public class Dog extends Animal{
         System.out.println(a+" / "+b+" = "+a/b);
     }
 
+    protected Dog run(){
+        System.out.println("返回值类型String报错");
+        return null;
+    }
 }

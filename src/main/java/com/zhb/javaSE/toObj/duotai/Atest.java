@@ -34,5 +34,14 @@ public class Atest {
         animal.method1(1,2);//*
         animal.method2(1,2);///
 
+
+        Animal cat1 = new Cat(1,2);
+        System.out.println();
+        System.out.println(cat1.getA()+"   "+((Cat) cat1).getB());
+        Cat cat2 = new Cat(2,2);
+        cat1.setA(78);
+
+        System.out.println(cat1.getA());
+        System.out.println(cat2.getA());
     }
 }
