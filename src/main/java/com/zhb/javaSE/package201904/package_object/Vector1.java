@@ -1,6 +1,7 @@
 package com.zhb.javaSE.package201904.package_object;
 
 import java.util.Scanner;
+import java.util.Vector;
 
 /**
  * @program: StudyJava
@@ -8,43 +9,46 @@ import java.util.Scanner;
  * @author: rainboz
  * @create: 19-4-22 下午4:10
  **/
-public class Vector {
+public class Vector1 {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        System.out.println("输入：");
-        Vector v=new Vector();
-        int maxScore = 0;//��¼��߷�
-        for(;;){
-            int score = s.nextInt();
-            if(score < 0){
-                break;
+        // TODO Auto-generated method stub
+        Scanner scanner;
+        Vector v = new Vector();
+        int count;
+        //  Integer obj =Integer.parseInt((String) count);
+//        Integer obj=count;
+        while (true) {
+            try {
+                System.out.println("输入学生成绩：");
+                scanner = new Scanner(System.in);
+                int score = scanner.nextInt();
+                // v.addElement(new Integer(score));//自动类型转换
+                v.addElement(score);
+                if (score < 0) {
+                    break;
+                }
+            } catch (Exception e) {
+                System.out.println(" 输入错误，请重新输入！！");
             }
-            //3.���������������ĳɼ��е���߷�
-            //��ȡѧ���ɼ��е���߷�
-            if(maxScore < score){
-                maxScore = score;
-            }
-            //���ν�ѧ���ɼ������v��
-            Integer score1 = new Integer(score);
-            v.addElement(score1);
-        }
 
-        //4.ͨ��v.elementAt(i)���λ�ȡ����v�е�Ԫ�أ�ͬʱ�ж�һ�¸��������ĵȼ��������
-        for(int i = 0;i < v.size();i++){
-            Integer score = (Integer)v.elementAt(i);
-            char level;
-            if(maxScore - score <= 10){
-                level = 'A';
-            }else if(maxScore - score <= 20){
-                level = 'B';
-            }else if(maxScore - score <= 30){
-                level = 'C';
-            }else{
-                level = 'D';
-            }
-            System.out.println("ѧ���ɼ�Ϊ��" + score + ",�ȼ�Ϊ��" + level);
         }
-
+        Object obj = v.elementAt(0);
+        int maxValue = (Integer) obj;
+        for (int i = 0; i < v.size() - 1; i++) {
+            if (maxValue < (Integer) v.elementAt(i)) {
+                maxValue = (Integer) v.elementAt(i);
+            }
+        }
+        for (int i = 0; i < v.size() - 1; i++) {
+            if (maxValue - (Integer) v.elementAt(i) <= 10) {
+                System.out.println("student[" + i + "]" + " score is " + (Integer) v.elementAt(i) + " ,level is ->A等！");
+            } else if (maxValue - (Integer) v.elementAt(i) <= 20) {
+                System.out.println("student[" + i + "]" + " score is " + (Integer) v.elementAt(i) + " ,level is ->B等！");
+            } else if (maxValue - (Integer) v.elementAt(i) <= 30) {
+                System.out.println("student[" + i + "]" + " score is " + (Integer) v.elementAt(i) + " ,level is ->C等！");
+            } else
+                System.out.println("student[" + i + "]" + " score is " + (Integer) v.elementAt(i) + " ,level is- >D等！");
+        }
     }
 }
 
