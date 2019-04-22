@@ -1,4 +1,6 @@
-package com.zhb.javaSE.package201904.package_object.duotai_test;
+package com.zhb.javaSE.package201904.package_object.duotai_test.tiantiankupao;
+
+import com.zhb.javaSE.package201904.package_object.duotai_test.Person;
 
 /**
  * @program: StudyJava
@@ -6,6 +8,10 @@ package com.zhb.javaSE.package201904.package_object.duotai_test;
  * @author: rainboz
  * @create: 19-4-22 下午4:17
  **/
-public class Cat {
+public class Cat extends Pet {
+    private String r = "Cat follow";
+    public void follow(){
+        System.out.println("Cat follow");
+    }
 }
 
