@@ -1,11 +1,30 @@
 package com.zhb.javaSE.toObj.duotai;
 
 public class Cat extends Animal{
+    private int b;
+    private int a;
+    public Cat() {
+    }
 
-    protected int run(){
-        super.run();
+    public Cat(int a, int b) {
+        super(a);
+        this.b = b;
+    }
+
+    public int getB() {
+        return b;
+    }
+    public void setB(int b) {
+        this.b = b;
+    }
+    protected int run0(){
         System.out.println("子类返回值类型int");
         return 0;
+    }
+    protected Cat  run(){
+        super.run();
+        System.out.println("子类返回值类型int");
+        return null;
     }
     @Override
     protected void  eat(){
