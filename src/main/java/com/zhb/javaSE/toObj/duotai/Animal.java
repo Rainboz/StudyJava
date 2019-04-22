@@ -20,4 +20,10 @@ public class Animal {
         System.out.println("父类返回值类型int,static修饰");
         return 0;
     }
+    protected void method1(double a,double b){
+        System.out.println(a+" + "+b+" = " +(a+b));
+    }
+    protected void method2(double a,double b){
+        System.out.println(a+" - "+b+" = "+(a-b));
+    }
 }

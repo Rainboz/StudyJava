@@ -14,3 +14,15 @@ MAVEN_OPTS
 
 Path
 %INTEL_DEV_REDIST%redist\intel64\compiler;C:\ProgramData\Oracle\Java\javapath;.;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\tools\MinGW64\MinGW64\bin;D:\tools\msys\1.0\bin;D:\tools\IBM Rational Rose\common;C:\Program Files\Git\cmd;D:\tools\prowerdesign;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\tools\Nodejs\;E:\BaiduYunDownload\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\bin;E:\BaiduYunDownload\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;E:\BaiduYunDownload\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\tools;D:\tools\Python;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;D:\tools\Tomcat8.0\apache-tomcat-8.5.31\bin;%MAVEN_HOME%\bin;
+
+Linux:
+    idea:-javaagent:/home/rainboz/tools/IDEA/idea-IU-191.6183.87/bin/JetbrainsIdesCrack-4.2-release.jar
+//java
+    export JAVA_HOME=/home/rainboz/tools/java/jdk1.8.0_202
+    export JRE_HOME=${JAVA_HOME}/jre
+    export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib:$CLASSPATH
+    export PATH=${JAVA_HOME}/bin:$PATH
+//maven+tomcat
+    export MAVEN_HOME=/home/rainboz/tools/maven/apache-maven-3.6.0
+    export PATH=${PATH}:${MAVEN_HOME}/bin
+    export CATALINA_HOME="/home/rainboz/tools/apache-tomcat-8.5.40"

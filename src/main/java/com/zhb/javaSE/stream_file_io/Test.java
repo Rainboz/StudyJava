@@ -17,7 +17,7 @@ public class Test {
         //也可以使用一个文件对象来创建一个输入流对象来读取文件。我们首先得使用 File() 方法来创建一个文件对象：
         File file = new File("/home/rainboz/linux/a.txt");
         InputStream out = new FileInputStream(file);
-        
+
 
     }
 }
