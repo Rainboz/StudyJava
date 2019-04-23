@@ -13,13 +13,12 @@ public class Test_abstract {
         System.out.println(car.noOfWheels());
         System.out.println(m.noOfWheels());
 
-
         String str1 = "abc";
         String str2 = "abc";
         str1 = "abc";
         String str4 = "abc";
         String str5 = "a" + "bc";
-        String str7 = str1 +"";
+        String str = str1 +"";
 
         String s1 = "abc1";
         String s2 = "abc"+1;
