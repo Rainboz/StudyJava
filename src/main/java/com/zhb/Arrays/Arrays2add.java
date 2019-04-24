@@ -26,6 +26,7 @@ public class Arrays2add {
         }
         System.out.println("输入插入位置index：");
         int index = sc2.nextInt();
+
         if (index < 0 || index >a.length){
             System.out.println("非法插入");
         }else {
