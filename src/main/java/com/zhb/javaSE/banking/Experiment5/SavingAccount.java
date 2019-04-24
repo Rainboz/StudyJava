@@ -13,6 +13,9 @@ import java.text.DecimalFormat;
 public class SavingAccount extends Account {
     private double interestRate;
 
+    public SavingAccount() {
+
+    }
 //    public SavingAccount(double interestRate) {
 //        this.interestRate = interestRate;
 //    }
@@ -27,8 +30,17 @@ public class SavingAccount extends Account {
         DecimalFormat d = new DecimalFormat("0%");
 //        if (interest_rate > 0)
         System.out.println("Creating her Savings Account with a " +
-                String.format("%.2f", balance) + " balance and " + d.format(interest_rate / 100) + " interest.");
+                String.format("%.2f", balance) + " balance and " +
+                d.format(interest_rate / 100) + " interest.");
 //        else
 
+    }
+
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
     }
 }

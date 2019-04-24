@@ -1,5 +1,5 @@
 package com.zhb.javaSE.banking;
 
-public class CheckingAccount {
+public class CheckingAccount  extends Account{
 
 }

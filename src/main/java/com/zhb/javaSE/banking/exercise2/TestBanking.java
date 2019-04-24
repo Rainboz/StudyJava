@@ -22,7 +22,7 @@ public class TestBanking {
         account.withdraw(47.62);
         System.out.println("Customer ["+customer.getFirstName()+", "+customer.getLastName()+
                 "] has a balance of "+account.getBalance());
-        customer.getAccount();
+        //customer.getAccount();
 
     }
 }

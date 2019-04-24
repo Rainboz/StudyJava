@@ -32,13 +32,15 @@ public class CheckingAccount extends Account {
         boolean flag = false;
         if (balance >= amt) {
             flag = true;
+            balance -= amt;
             System.out.println("Withdraw " + String.format("%.2f", amt) + ":" + flag);
             return true;
         }
         if (amt > balance) {//怎么判断存在透支保护
-            if (overdraftProtection >= Math.sqrt(balance - amt)){
+            if (overdraftProtection > Math.sqrt(balance - amt)){
                 flag = true;
-                this.balance = 0;
+//                this.balance = 0;
+                setBalance(0);
                 overdraftProtection -= Math.sqrt(balance - amt);//冲减可透支金额
                 System.out.println("Withdraw " + String.format("%.2f", amt) + ":" + flag);
             }else {
