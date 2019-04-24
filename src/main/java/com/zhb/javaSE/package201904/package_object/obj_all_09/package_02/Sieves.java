@@ -1,6 +1,4 @@
-package com.zhb.javaSE.package201904.package_object.obj_all.package_02;
-
-import java.util.Random;
+package com.zhb.javaSE.package201904.package_object.obj_all_09.package_02;
 
 /**
  * @program: StudyJava

@@ -1,4 +1,4 @@
-package com.zhb.javaSE.package201904.package_object.obj_all.package_03;
+package com.zhb.javaSE.package201904.package_object.obj_all_09.package_03;
 
 import java.util.Scanner;
 
