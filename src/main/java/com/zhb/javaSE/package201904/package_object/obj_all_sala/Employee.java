@@ -6,5 +6,9 @@ package com.zhb.javaSE.package201904.package_object.obj_all_sala;
  * @author: rainboz
  * @create: 2019-04-24 23:07
  **/
-public class Employee {
+public abstract class Employee {
+    private String name;
+    private int number;
+    private MyDate mydate;
+    abstract void earnings();
 }
