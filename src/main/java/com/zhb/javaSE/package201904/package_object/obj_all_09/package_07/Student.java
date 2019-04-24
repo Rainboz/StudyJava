@@ -52,10 +52,20 @@ public class Student {
                     ", stu_name='" + stu_name + '\'' +
                     ", stu_sroce=" + stu_sroce +
                     '}';
+        else
+            return "成绩："+ stu_sroce+ "不在80-89分内";
 
     }
 
     public static void main(String[] args) {
-
+        Student[] students = new Student[4];
+        for (int i = 0; i < students.length; i++) {
+            double s = Double.parseDouble(String.format("%.2f",(1+Math.random())*(i+45)+1));
+            students[i] = new Student(i+"","stu"+i,s);
+        }
+        for (Student x :students) {
+            //遍历Student输出
+            System.out.println(x);
+        }
     }
 }
