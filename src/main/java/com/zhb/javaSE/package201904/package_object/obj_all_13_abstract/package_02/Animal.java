@@ -6,5 +6,6 @@ package com.zhb.javaSE.package201904.package_object.obj_all_13_abstract.package_
  * @author: rainboz
  * @create: 2019-04-25 11:49
  **/
-public class Animal {
+public abstract class Animal {
+    abstract void eat();
 }

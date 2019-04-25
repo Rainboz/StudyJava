@@ -1,7 +1,6 @@
 package com.zhb.javaSE.package201904.package_object.obj_all_13_abstract.package_05;
 
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,14 +10,13 @@ import java.util.Map;
  * @author: rainboz
  * @create: 2019-04-25 12:11
  **/
-public class FindScoreImpl extends Student implements FindScore{
+public class FindScoreDaoImpl extends Student implements FindScoreDao {
 
-//    Map<String,Student> map = new HashMap();
+    //    Map<String,Student> map = new HashMap();
+    private FindScoreDao findScoreDao;
+
     @Override
-    public List<Map<String, Student>> findAllStu(List<Map<String, Student>> list) {
-        Person p = new Student("zhb",22,' ',"15905139","杭电信工","99");
-        Student student = (Student) p;
-        list.add()
-        return null;
+    public List<Student> findAllStu(String stu_id) {
+        return findScoreDao.findAllStu(stu_id);
     }
 }

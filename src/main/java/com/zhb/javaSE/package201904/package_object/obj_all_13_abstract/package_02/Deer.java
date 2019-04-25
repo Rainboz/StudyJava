@@ -6,5 +6,9 @@ package com.zhb.javaSE.package201904.package_object.obj_all_13_abstract.package_
  * @author: rainboz
  * @create: 2019-04-25 11:51
  **/
-public class Deer {
+public class Deer extends Animal {
+    @Override
+    void eat() {
+        System.out.println("Deer eat");
+    }
 }

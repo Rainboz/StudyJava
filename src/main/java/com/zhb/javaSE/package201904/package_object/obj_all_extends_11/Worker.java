@@ -6,5 +6,41 @@ package com.zhb.javaSE.package201904.package_object.obj_all_extends_11;
  * @author: rainboz
  * @create: 2019-04-25 10:36
  **/
-public class Worker {
+public class Worker extends Employee {
+    private char category;
+    boolean dressAllowance;
+
+    public Worker(String name, char sex, char category, boolean dressAllowance) {
+        super(name, sex);
+        this.category = category;
+        this.dressAllowance = dressAllowance;
+    }
+
+    public boolean isDressAll() {
+        /**
+         *功能描述 @description: TODO 负责通过判断dressAllowance的值输出 ，是否提供服装津贴。
+         * @date 19-4-25 上午10:38
+         * @param []
+         * @return boolean
+         */
+        if (category == '0') {
+            dressAllowance = false;
+            System.out.println("不提供津贴");
+        } else {
+            dressAllowance = true;
+            System.out.println("提供津贴");
+        }
+        return dressAllowance;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + super.getName() + '\'' +
+                ", sex=" + super.getSex() +
+                " Worker[" +
+                "category=" + category +
+                ", dressAllowance=" + dressAllowance +"]"+
+                '}';
+    }
 }
