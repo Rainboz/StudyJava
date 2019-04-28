@@ -145,7 +145,7 @@ public class Test {
     }
 
     /**
-     * 自然排序 sort
+     * 自然排序 sort Comparable 对类可控制时，即能实现接口
      */
     @org.junit.Test
     public void method() {

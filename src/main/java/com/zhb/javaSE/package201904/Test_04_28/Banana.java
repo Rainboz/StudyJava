@@ -9,6 +9,7 @@ package com.zhb.javaSE.package201904.Test_04_28;
 public class Banana  extends Fruit {
     @Override
     public void dance() {
+
         System.out.println("Banana");
     }
 }

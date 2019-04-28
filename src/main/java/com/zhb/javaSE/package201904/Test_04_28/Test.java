@@ -9,8 +9,16 @@ package com.zhb.javaSE.package201904.Test_04_28;
  **/
 public class Test {
     public static void main(String[] args) {
-        Fruit a = new Apple();
-        method(a);
+
+        try {
+            Fruit a = new Apple();
+            method(a);
+        }catch (Exception e){
+
+        }
+        finally {
+
+        }
 
     }
     public static void method(Fruit a){
