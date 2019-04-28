@@ -346,6 +346,23 @@ public class Test {
 //            System.out.println("百位: "+a+" 十位: "+b+" 个位: "+c);
         }
     }
+    /**
+     *功能描述 @description: TODO 回文
+     * @date 19-4-28 上午8:50
+     * @return void
+     */
+    public static void method17(){
+        for (int i = 10000; i <= 99999 ; i++) {
+            //个位 i%10 == 万位i/10000   十位 i/10%10 == i/1000%10;//千位
+            int a = i/1000%10;//千位
+            int b = i/10%10;//十位
+            int c = i%10;//个位
+            int d = i/10000;//万位
+            if (a == b && d == c){
+                System.out.println("是回文："+i);
+            }
+        }
+    }
     public static void method0(){}
     public static void main(String[] args) {
 //        method1();
@@ -364,7 +381,7 @@ public class Test {
         System.out.println("---------------method9-----------------");
         method9(100,100);
         System.out.println("---------------method10-----------------");
-        method10(300,400);
+        method10(101,200);
         System.out.println("---------------method11-----------------");
         method11();
         System.out.println("---------------method12-----------------");
@@ -385,6 +402,8 @@ public class Test {
         method15(12);
         System.out.println("---------------method16-----------------");
         method16();
+        System.out.println("---------------method17-----------------");
+        method17();
     }
 
 }
