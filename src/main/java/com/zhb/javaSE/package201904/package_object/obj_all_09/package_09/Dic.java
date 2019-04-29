@@ -41,7 +41,7 @@ public class Dic {
          */
 //        Properties pps = new Properties();
 //        pps.getProperty()
-        String[] a = in.split("\\.");
+        String[] a = in.split(" ");
         for (String x : a) {
              //System.out.println("单词："+x);
         }

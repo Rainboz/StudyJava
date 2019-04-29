@@ -6,5 +6,11 @@ package com.zhb.javaSE.package201904.package_Exception;
  * @author: rainboz
  * @create: 2019-04-29 14:32
  **/
-public class MyException {
+public class MyException extends Exception{
+    public MyException() {
+    }
+
+    public MyException(String message) {
+        super(message);
+    }
 }
