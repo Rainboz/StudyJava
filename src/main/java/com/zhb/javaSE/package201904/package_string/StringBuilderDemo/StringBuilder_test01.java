@@ -10,7 +10,6 @@ public class StringBuilder_test01 {
         System.out.println("----------------");
         boolean b2 = isLevelString("aakhsk");
         System.out.println(b2);
-        File file = new File("resources\\jdbc.properties");
     }
 
     //判断一个字符串是否为对称字符串
