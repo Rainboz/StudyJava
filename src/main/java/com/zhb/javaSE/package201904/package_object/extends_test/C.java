@@ -12,6 +12,7 @@ public class C {
     public C() {
         System.out.println("C");
     }
+    public final void sc(){}
 
     public static void main(String[] args) {
         C c = new C();

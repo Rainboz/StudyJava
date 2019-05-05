@@ -10,5 +10,6 @@ public class A extends C{
     public A() {
         System.out.println("A");
     }
+    public final void sc(int i){}
 }
 
