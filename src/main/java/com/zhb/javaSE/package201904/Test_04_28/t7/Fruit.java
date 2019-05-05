@@ -1,4 +1,4 @@
-package com.zhb.javaSE.package201904.Test_04_28;
+package com.zhb.javaSE.package201904.Test_04_28.t7;
 
 /**
  * @program: StudyJava
