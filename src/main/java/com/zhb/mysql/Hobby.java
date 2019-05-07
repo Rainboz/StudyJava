@@ -60,14 +60,14 @@ public class Hobby extends User{
                 "hobbyId=" + hobbyId +
                 ", hobbyName='" + hobbyName + '\'' +
                 ", hobbyContent='" + hobbyContent + '\'' +
-                ", user=" + user +//这里隐式调用父类toString()会报错
+                ", user=" + user +//这里隐式调用父类toString()会报错:应该是调用子类的toString,想要调用父类用super.toString()
                 '}';
             Exception in thread "main" java.lang.StackOverflowError
 	            at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:449)
 	            at java.lang.StringBuilder.append(StringBuilder.java:136)
 	            at com.zhb.mysql.Hobby.toString(Hobby.java:77)
          */
-        return "Hobby{" +
+    /*    return "Hobby{" +
                 "hobbyId=" + hobbyId +
                 ", hobbyName='" + hobbyName + '\'' +
                 ", hobbyContent='" + hobbyContent + '\'' +
@@ -77,6 +77,12 @@ public class Hobby extends User{
                 ", age=" + user.getAge() +
                 ", sex=" + user.getSex() +
                 ']'+
+                '}';*/
+        return "Hobby{" +
+                "hobbyId=" + hobbyId +
+                ", hobbyName='" + hobbyName + '\'' +
+                ", hobbyContent='" + hobbyContent + '\'' +
+                ", user_id=" + user.getUserId() +//这里隐式调用父类toString()会报错:应该是调用子类的toString,想要调用父类用super.toString()
                 '}';
     }
 }
