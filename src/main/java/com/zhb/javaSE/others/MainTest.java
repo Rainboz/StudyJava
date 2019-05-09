@@ -22,7 +22,6 @@ public class MainTest {
         System.out.println("double的大小：" + Double.SIZE + " double的默认值：" + f + " double的数据范围：" + Double.MIN_VALUE + "~" + Double.MAX_VALUE);
         System.out.println("char的大小：" + Character.SIZE + " char的默认值：" + g + " char的数据范围：" + Character.MIN_VALUE + "~" + Character.MAX_VALUE);
         System.out.println("boolean的大小：" + Byte.SIZE + " boolean的默认值：" + h + " boolean的数据范围：" + Byte.MIN_VALUE + "~" + Byte.MAX_VALUE+"boolean类型占了单独使用是4个字节，在数组中又是1个字节。\n");
-
         System.out.println("String字符串的默认值：" + str1 + "str的默认长度：" + str1.length());
         System.out.println("String字符串的默认值：" + str2);
         System.out.println(0.1+0.2);

@@ -11,7 +11,8 @@ import java.util.ArrayList;
 public class Sxhs {
     public static void main(String[] args) {
         method();
-
+        System.out.println(-10%3);
+        System.out.println(-10%-3);
     }
 
     //3位数，打印所有水仙花数
