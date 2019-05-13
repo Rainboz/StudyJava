@@ -25,7 +25,7 @@ public class Test {
 
         try {
             // 注册 JDBC 驱动
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName(JDBC_DRIVER);
             // 打开链接
             System.out.println("连接数据库...");
             conn = DriverManager.getConnection(DB_URL,USER,PASS);
@@ -43,8 +43,6 @@ public class Test {
            // ResultSet rs2 = stmt.executeQuery(sql);
 
             ResultSet rs = stmt.executeQuery(sql2);
-
-
 
             //创建user对象
             User user = new Hobby();
