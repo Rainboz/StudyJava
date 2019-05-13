@@ -12,6 +12,11 @@ import java.util.List;
 public class Demo {
 
     public static void main(String[] args) {
+        /*int k=0;
+        for (;k<100;);//动态语义错误
 
+        {
+            k++;
+        }*/
     }
 }
