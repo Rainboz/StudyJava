@@ -1,0 +1,52 @@
+package com.zhb.javaSE;
+
+public class MainTest {
+    static byte a;
+    static short b;
+    static int c;
+    static long d;
+    static float e;
+    static double f;
+    static char g;
+    static boolean h;
+    //String不是基本类型
+    static String str1 = "";//生成一个String类型的引用，而且分配内存空间来存放"";
+    static String str2; //只生成一个string类型的引用；不分配内存空间,默认为null
+
+    public static void main(String[] args) {
+        System.out.println("byte的大小：" + Byte.SIZE + " byte的默认值：" + a + " byte的数据范围：" + Byte.MIN_VALUE + "~" + Byte.MAX_VALUE);
+        System.out.println("short的大小：" + Short.SIZE + " short的默认值：" + b + " short的数据范围：" + Short.MIN_VALUE + "~" + Short.MAX_VALUE);
+        System.out.println("int的大小：" + Integer.SIZE + " int的默认值：" + c + " int的数据范围：" + Integer.MIN_VALUE + "~" + Integer.MAX_VALUE);
+        System.out.println("long的大小：" + Long.SIZE + " long的默认值：" + d + " long的数据范围：" + Long.MIN_VALUE + "~" + Long.MAX_VALUE);
+        System.out.println("float的大小：" + Float.SIZE + " float的默认值：" + e + " float的数据范围：" + Float.MIN_VALUE + "~" + Float.MAX_VALUE);
+        System.out.println("double的大小：" + Double.SIZE + " double的默认值：" + f + " double的数据范围：" + Double.MIN_VALUE + "~" + Double.MAX_VALUE);
+        System.out.println("char的大小：" + Character.SIZE + " char的默认值：" + g + " char的数据范围：" + Character.MIN_VALUE + "~" + Character.MAX_VALUE);
+        System.out.println("boolean的大小：" + Byte.SIZE + " boolean的默认值：" + h + " boolean的数据范围：" + Byte.MIN_VALUE + "~" + Byte.MAX_VALUE+"boolean类型占了单独使用是4个字节，在数组中又是1个字节。\n");
+        System.out.println("String字符串的默认值：" + str1 + "str的默认长度：" + str1.length());
+        System.out.println("String字符串的默认值：" + str2);
+        System.out.println(0.1+0.2);
+        int m = 9;
+        //System.out.println(m+=10);
+        //异步编程
+        //System.out.println(m-=5);
+        //System.out.println(m*=8);
+        System.out.println(m/=3);
+        System.out.println(m++);
+        System.out.println(++m);
+
+    }
+
+}
+"E:\Program Files\java\jdk1.8.0_144\bin\java.exe" "-javaagent:E:\tools\Intellij IDEA\IntelliJ IDEA 2018.3.5\lib\idea_rt.jar=60341:E:\tools\Intellij IDEA\IntelliJ IDEA 2018.3.5\bin" -Dfile.encoding=UTF-8 -classpath "E:\Program Files\java\jdk1.8.0_144\jre\lib\charsets.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\deploy.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\access-bridge.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\jaccess-examples.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\localedata.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\sunec.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\javaws.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\jce.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\jfr.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\jfxswt.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\jsse.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\management-agent.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\plugin.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\resources.jar;E:\Program Files\java\jdk1.8.0_144\jre\lib\rt.jar;H:\study\java\workspace\StudyJava\target\classes;E:\tools\maven\repository\junit\junit\4.11\junit-4.11.jar;E:\tools\maven\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;E:\tools\maven\repository\redis\clients\jedis\3.0.1\jedis-3.0.1.jar;E:\tools\maven\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;E:\tools\maven\repository\org\slf4j\slf4j-nop\1.7.2\slf4j-nop-1.7.2.jar;E:\tools\maven\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar;E:\tools\maven\repository\commons-dbcp\commons-dbcp\1.4\commons-dbcp-1.4.jar;E:\tools\maven\repository\commons-pool\commons-pool\1.6\commons-pool-1.6.jar;E:\tools\maven\repository\org\apache\commons\commons-pool2\2.4.2\commons-pool2-2.4.2.jar;E:\tools\maven\repository\c3p0\c3p0\0.9.1.2\c3p0-0.9.1.2.jar;E:\tools\maven\repository\commons-dbutils\commons-dbutils\1.7\commons-dbutils-1.7.jar" com.zhb.javaSE.MainTest
+byte的大小：8 byte的默认值：0 byte的数据范围：-128~127
+short的大小：16 short的默认值：0 short的数据范围：-32768~32767
+int的大小：32 int的默认值：0 int的数据范围：-2147483648~2147483647
+long的大小：64 long的默认值：0 long的数据范围：-9223372036854775808~9223372036854775807
+float的大小：32 float的默认值：0.0 float的数据范围：1.4E-45~3.4028235E38
+double的大小：64 double的默认值：0.0 double的数据范围：4.9E-324~1.7976931348623157E308
+char的大小：16 char的默认值：  char的数据范围： ~￿
+boolean的大小：8 boolean的默认值：false boolean的数据范围：-128~127boolean类型占了单独使用是4个字节，在数组中又是1个字节。
+
+String字符串的默认值：str的默认长度：0
+String字符串的默认值：null
+0.30000000000000004
