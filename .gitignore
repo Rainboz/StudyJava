@@ -46,3 +46,4 @@ doc/*.txt
 将删除 target/generated-test-sources/
 stage/cached
 target/
+\\home\\rainboz\\linux\\file\\array.txt
