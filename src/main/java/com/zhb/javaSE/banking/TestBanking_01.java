@@ -2,7 +2,7 @@ package com.zhb.javaSE.banking;
 
 import java.text.DecimalFormat;
 
-public class TestBanking {
+public class TestBanking_01 {
     public static void main(String[] args) {
         /**
          * 实验1、

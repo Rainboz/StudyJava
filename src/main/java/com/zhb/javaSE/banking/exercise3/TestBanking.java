@@ -12,6 +12,7 @@ import com.zhb.javaSE.banking.Customer;
 public class TestBanking {
     public static void main(String[] args) {
         Customer customer = new Customer("Jane","Smith");
+        System.out.println("Creating the customer " + customer.getFirstName() + " " + customer.getLastName() + ".");
         Account account = new Account();
         account.setBalance(500);
         customer.setAccount(account);

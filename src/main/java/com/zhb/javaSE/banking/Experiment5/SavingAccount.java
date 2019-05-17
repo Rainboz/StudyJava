@@ -20,6 +20,7 @@ public class SavingAccount extends Account {
     public SavingAccount(double balance) {
         super(balance);
     }
+
     //    public SavingAccount(double interestRate) {
 //        this.interestRate = interestRate;
 //    }

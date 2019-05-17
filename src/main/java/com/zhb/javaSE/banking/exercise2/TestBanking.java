@@ -13,7 +13,7 @@ public class TestBanking {
 //        account.withdraw(47.62);
 //        account.getBalance();
         Customer customer = new Customer("Jane", "Smith");
-
+        System.out.println("Creating the customer " + customer.getFirstName() + " " + customer.getLastName() + ".");
         Account account = new Account();
         account.setBalance(500);
         customer.setAccount(account);

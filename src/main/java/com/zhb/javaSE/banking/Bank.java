@@ -6,8 +6,10 @@ public class Bank {
     private Customer customers[];
     private int numberOfCustomers = 0;
 
+
     public Bank() {
     }
+
 
     public Bank(Customer[] customers) {
 
@@ -18,11 +20,12 @@ public class Bank {
         customer.setFirstName(firstName);
         customer.setLastName(lastName);
         customers = new Customer[4];
-        for (int i = customers.length-1; i > 0; i--) {
-            customers[i] = customer;
+        for (int i = customers.length - 1; i > 0; i--) {
+            if (customers[i] == null)
+                customers[i] = customer;
         }
         numberOfCustomers++;//导致用户和数组下标倒置
-        System.out.println("Customer["+numberOfCustomers+"]is "+firstName+","+lastName);
+        System.out.println("Customer[" + numberOfCustomers + "]is " + firstName + "," + lastName);
         setCustomers(customers);
         return customers;
     }
@@ -44,4 +47,5 @@ public class Bank {
     public void setNumberOfCustomers(int numberOfCustomers) {
         this.numberOfCustomers = numberOfCustomers;
     }
+
 }
