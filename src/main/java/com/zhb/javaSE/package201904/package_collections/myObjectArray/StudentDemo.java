@@ -18,6 +18,7 @@ public class StudentDemo {
         Student student1 = new Student("zhb",1);
         Student student2 = new Student("s",2);
         Student student3 = new Student("d",43);
+
         s[0] = student1;
         s[1] = student2;
         s[2] = student3;
