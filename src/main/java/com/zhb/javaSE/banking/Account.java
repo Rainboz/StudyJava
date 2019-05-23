@@ -24,7 +24,7 @@ public class Account {
     public boolean deposit(double amt) {
         boolean flag = true;
         balance += amt;
-        System.out.println("Deposit  " + String.format("%.2f", amt) + ":" + flag);
+        System.out.println("Deposit  " + String.format("%.2f", amt) + " succeeds?" + flag);
         return true;
     }
 

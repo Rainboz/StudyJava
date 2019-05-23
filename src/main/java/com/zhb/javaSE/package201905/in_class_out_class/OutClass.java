@@ -15,10 +15,15 @@ public class OutClass {
             System.out.println("我是外部类的内部类的方法！");
         }
     }
-    class EinClass extends InClass{
+    class EinClass extends InClass implements Runnable{
         public void test(){
             super.test();
             System.out.println("我是外部类的内部类的子类的重写方法！");
+        }
+
+        @Override
+        public void run() {
+
         }
     }
 }

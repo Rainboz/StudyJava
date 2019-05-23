@@ -130,15 +130,18 @@ public class Test {
             /**
              * 2). 创建 TreeSet 时传入 Comparator对象，按生日日期的先后排序。
              */
-            Comparator<MyDate> a = new MyDate();
+//            Comparator<MyDate> a = new MyDate();
 
 
 //            Assert.assertThat(t.get(0), equalTo(new Employee("a", 12, new MyDate(4, 21, 1997))));
             Object[] e;
             e = t.toArray();
-            for (int i = 0; i < e.length; i++) {
+          /*  for (int i = 0; i < e.length; i++) {
                 System.out.println(e[i]);
-            }
+            }*/
+          for (Object o : e){
+              System.out.println(o);
+          }
         } catch (Exception e) {
             e.printStackTrace();
         }

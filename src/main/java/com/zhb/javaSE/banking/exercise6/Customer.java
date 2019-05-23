@@ -1,5 +1,6 @@
-package com.zhb.javaSE.banking;
+package com.zhb.javaSE.banking.exercise6;
 
+import com.zhb.javaSE.banking.Account;
 import com.zhb.javaSE.banking.Experiment5.CheckingAccount;
 import com.zhb.javaSE.banking.Experiment5.SavingAccount;
 
