@@ -8,3 +8,9 @@ helloworld6
 helloworld7
 helloworld8
 helloworld9
+需求：
+	把一个路径下的文件A的内容复制到其他路径下的文件B中
+数据源：
+	   A--读数据--FileReader
+目的地：
+	   B--写数据--FileWriter
