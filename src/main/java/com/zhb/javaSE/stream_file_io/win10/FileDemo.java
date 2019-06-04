@@ -19,12 +19,12 @@ public class FileDemo {
             fileReader = new FileReader(file);
             inputStream = new FileInputStream(file);
             //为什么是GBK,不是UTF8
-            inputStreamReader =  new InputStreamReader(inputStream,"GBK");
+            inputStreamReader = new InputStreamReader(inputStream, "GBK");
 
             reader = new BufferedReader(inputStreamReader);
 
             String line;
-            while ((line = reader.readLine())!=null){
+            while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
             System.out.println(fileReader.read());
