@@ -15,6 +15,6 @@ public class spring {
 
     public spring(int id) {
         this.id = id;
-        ArrayList
+
     }
 }
