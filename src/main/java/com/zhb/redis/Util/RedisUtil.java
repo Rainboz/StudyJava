@@ -8,7 +8,7 @@ public class RedisUtil{
     //服务器IP地址
     private static String IP = "47.100.9.160";
     //端口
-    private static int PORT = 6378;
+    private static int PORT = 6379;
     //密码
     private static String AUTH = "redis";
     //连接实例的最大连接数
