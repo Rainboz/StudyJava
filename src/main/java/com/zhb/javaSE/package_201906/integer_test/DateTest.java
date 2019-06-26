@@ -14,8 +14,8 @@ public class DateTest {
     private int i = 2;
     public static void main(String[] args) throws CloneNotSupportedException {
         //method1();
-        //method2();
-        method3();
+        method2();
+        //method3();
 
     }
 
@@ -44,7 +44,8 @@ public class DateTest {
 
         // 创建SimpleDateFormat对象，指定目标格式
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
+        int result = c.getWeekYear();
+        System.out.println(result);
         // 将日期转换为指定格式的字符串
         String now = sdf.format(date);
         System.out.println("当前时间：" + now);
