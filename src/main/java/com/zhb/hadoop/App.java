@@ -7,14 +7,16 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IOUtils;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 
 public class App {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
         FileSystem fileSystem = getFileSystem();
 
         //read hdfs file
-        String fileName = "/user/zhb/wc.txt";
+        String fileName = "/user/rain/input/wc.input";
         Path path = new Path(fileName);
         FSDataInputStream inputStream = fileSystem.open(path);
         try {
@@ -29,9 +31,9 @@ public class App {
 
     }
 
-    public static FileSystem getFileSystem() throws IOException {
+    public static FileSystem getFileSystem() throws IOException, URISyntaxException, InterruptedException {
         Configuration configuration = new Configuration();
-        FileSystem fileSystem = FileSystem.get(configuration);
-        return fileSystem;
+        FileSystem fs = FileSystem.get(new URI("hdfs://rain-one:9000"), configuration, "rain");
+        return fs;
     }
 }
