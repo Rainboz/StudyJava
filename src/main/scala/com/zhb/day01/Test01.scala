@@ -12,9 +12,9 @@ object Test01 {
     //print("姓名\t年龄\t籍贯\t住址\n")
     //print("john\t12\t河北\t北京")
     //funcation1()
-    println(funcation2(funcation3, 10))
-    println("multiplier(1) value = " + multiplier(1))
-    println("multiplier(2) value = " + multiplier(2))
+    //println(funcation2(funcation3, 10))
+    //println("multiplier(1) value = " + multiplier(1))
+    //println("multiplier(2) value = " + multiplier(2))
   }
   def funcation1(): Unit = {
     //使用+
@@ -38,4 +38,7 @@ object Test01 {
   //匿名函数
   var factor = 3
   val multiplier = (i: Int) => i * factor
+
+  var arr1 = Array[Int](3)
+  println(arr1(0))
 }
