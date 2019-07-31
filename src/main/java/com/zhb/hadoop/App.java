@@ -16,7 +16,7 @@ public class App {
         FileSystem fileSystem = getFileSystem();
 
         //read hdfs file
-        String fileName = "/user/rain/input/wc.input";
+        String fileName = "/user/rain/wc.input";
         Path path = new Path(fileName);
         FSDataInputStream inputStream = fileSystem.open(path);
         try {
@@ -33,7 +33,8 @@ public class App {
 
     public static FileSystem getFileSystem() throws IOException, URISyntaxException, InterruptedException {
         Configuration configuration = new Configuration();
-        FileSystem fs = FileSystem.get(new URI("hdfs://rain-one:9000"), configuration, "rain");
+        System.setProperty("hadoop.home.dir","E:\\tools\\hadoop-2.7.2");
+        FileSystem fs = FileSystem.get(new URI("hdfs://hadoop-zhb004.com:9000"), configuration, "rain");
         return fs;
     }
 }
