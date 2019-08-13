@@ -28,11 +28,12 @@ public class HBaseUtil {
     //注册连接信息，获取hbase管理用户
     static {
         conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "hadoop-zhb004.com");
+        conf.set("hbase.zookeeper.quorum", "rain01");
+        //conf.set("hbase.zookeeper.quorum", "hadoop-zhb004.com");
         //win10下报错：Failed to locate the winutils binary in the hadoop binary path
         //Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
         conf.set("hbase.zookeeper.property.clientPort", "2181");
-        System.setProperty("hadoop.home.dir", "E:\\tools\\hadoop-2.7.2");
+        //System.setProperty("hadoop.home.dir", "E:\\tools\\hadoop-2.7.2");
         try {
             conn = ConnectionFactory.createConnection(conf);
             admin = conn.getAdmin();
