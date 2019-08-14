@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/public.css">
+    <style>
+        div{
+            border: 2px solid red;
+            text-align: center;
+            width: 300px;
+            height: 300px;
+        }
+        #register{
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+<table align="center" style="text-align: center" width="60%" border="1px" cellpadding="10" cellspacing="0">
+    <tr>
+        <th>员工号</th>
+        <th>员工名</th>
+        <th>性别</th>
+        <th>年龄</th>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>zhb</td>
+        <td>男</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>zhb</td>
+        <td>男</td>
+        <td>22</td>
+    </tr>
+
+</table>
+<div class="wrap">
+    <form action="" method="get/post">
+        用户名：<input type="text" name="username" value="admin"/>
+        <br/>
+        密码： <input type="password" name="password" value=""/>
+        <br/>
+        性别： 男<input type="radio" name="sex" value="1"/>
+        女<input type="radio" name="sex" value="0"/>
+        <br/>
+        爱好：乒乓<input type="checkbox" name="hobby" value="pp"/>
+        篮球<input type="checkbox" name="hobby" value="lq"/>
+        钢琴<input type="checkbox" name="hobby" value="gq"/>
+        音乐<input type="checkbox" name="hobby" value="yy"/>
+        <br/>
+        城市：<select name="province">
+        <option value="hz">杭州</option>
+        <option value="ls">丽水</option>
+        <option value="nb">宁波</option>
+        <option value="zj">诸暨</option>
+    </select>
+        <br/>
+        <input id="register" type="submit" value="注册"/>
+    </form>
+</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
-package com.zhb.redis;
+package com.rain.redis;
 
-import com.zhb.redis.Util.RedisUtil;
+import com.rain.redis.Util.RedisUtil;
 import org.junit.Test;
 
 public class RedisTest {

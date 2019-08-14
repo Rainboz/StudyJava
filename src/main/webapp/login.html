@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" href="src/main/webapp/css/public.css">
+    <style>
+        #login{
+            border: 1px solid red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div id="login">
+        <h1>欢迎登录</h1>
+
+        <form action="login" method="POST">
+            用户名称：<input type="text" name="username" placeholder="请在这里输入用户名"/>
+            <br/>
+            用户密码：<input type="password" name="password"/>
+            <br/>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    <div class="clr"></div>
+</div>
+</body>
+</html>

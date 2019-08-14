@@ -3,6 +3,10 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
+    <display-name>StudyJava</display-name>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 	<!--处理静态css,js,image等资源-->
 	<servlet-mapping>
 		<servlet-name>default</servlet-name>
@@ -25,4 +29,23 @@
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
 
+    <!--配置LoginServlet与处理的请求映射
+        客户端请求的过程：
+            servlet-mapping中的url-pattern进行匹配，
+            在找到servlet-mapping中的servlet-name的值，与servlet节点匹配相同的servlet-name
+            最后找到servlet-class
+            通过反射的方式创建LoginServlet的实例，根据具体的请求方式调用doGet或doPost方法
+    -->
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.rain.javaweb.servlet_test.LoginServlet</servlet-class>
+    </servlet>
+
+    <!--客户端登录请求： http://localhost:8999/StudyJava/login
+        url:项目名可在tomcat配置，也可直接设置为/
+    -->
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
 </web-app>

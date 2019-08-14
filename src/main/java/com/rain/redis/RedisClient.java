@@ -1,4 +1,4 @@
-package com.zhb.redis;
+package com.rain.redis;
 
 
 import redis.clients.jedis.Jedis;

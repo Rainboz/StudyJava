@@ -30,5 +30,5 @@ com.zhb.javaSE.toObj.duotai
 com.zhb.javaSE.toObj.duotai.T4
 com.zhb.main
 com.zhb.queue
-com.zhb.redis
-com.zhb.redis.Util
+com.rain.redis
+com.rain.redis.Util
