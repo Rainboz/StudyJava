@@ -38,7 +38,7 @@
     -->
     <servlet>
         <servlet-name>loginServlet</servlet-name>
-        <servlet-class>com.rain.javaweb.servlet_test.LoginServlet</servlet-class>
+        <servlet-class>com.rain.javaweb.login.servlet.LoginServlet</servlet-class>
     </servlet>
 
     <!--客户端登录请求： http://localhost:8999/StudyJava/login

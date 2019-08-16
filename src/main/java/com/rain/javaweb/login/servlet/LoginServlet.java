@@ -1,4 +1,8 @@
-package com.rain.javaweb.servlet_test;
+package com.rain.javaweb.login.servlet;
+
+import com.rain.javaweb.login.beans.User;
+import com.rain.javaweb.login.dao.UserDao;
+import com.rain.javaweb.login.dao.UserDaoImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -46,16 +50,28 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
         System.out.println(username + "--" + password);
 
-        System.out.println("Admin".equalsIgnoreCase(username));
-        System.out.println("550320023".equals(password));
+//        System.out.println("Admin".equalsIgnoreCase(username));
+//        System.out.println("550320023".equals(password));
 
         //验证密码
-
         //通过响应对象HttpServletResponse，给客户端响应数据
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
 
-        if ("Admin".equalsIgnoreCase(username) && "550320023".equals(password)) {
+        //获取dao对象
+        UserDao userDao = new UserDaoImpl();
+        User user = userDao.getUserByUsernameAndPassword(username,password);
+        if (user != null){
+            //登录成功
+            System.out.println(user.toString());
+            out.println("<h1><font color='green'>Login success!登录成功</font></h1>");
+        }else {
+            //登录失败
+
+            out.println("<h1><font color='green'>Login Failed!登录失败</font></h1>");
+        }
+
+        /*if ("Admin".equalsIgnoreCase(username) && "550320023".equals(password)) {
             //登录成功
 
             out.println("<h1><font color='green'>Login success!登录成功</font></h1>");
@@ -65,7 +81,7 @@ public class LoginServlet extends HttpServlet {
             out.println("<h1><font color='green'>Login Failed!登录失败</font></h1>");
 
             System.out.println("Login Failed!登录失败");
-        }
+        }*/
     }
 
   /*  @Override
