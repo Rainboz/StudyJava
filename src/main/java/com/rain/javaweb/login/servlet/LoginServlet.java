@@ -50,25 +50,63 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
         System.out.println(username + "--" + password);
 
-//        System.out.println("Admin".equalsIgnoreCase(username));
-//        System.out.println("550320023".equals(password));
+        //        System.out.println("Admin".equalsIgnoreCase(username));
+        //        System.out.println("550320023".equals(password));
 
         //验证密码
         //通过响应对象HttpServletResponse，给客户端响应数据
+        //设置响应头信息
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
 
         //获取dao对象
         UserDao userDao = new UserDaoImpl();
-        User user = userDao.getUserByUsernameAndPassword(username,password);
-        if (user != null){
+        User user = userDao.getUserByUsernameAndPassword(username, password);
+        if (user != null) {
             //登录成功
             System.out.println(user.toString());
             out.println("<h1><font color='green'>Login success!登录成功</font></h1>");
-        }else {
-            //登录失败
+        } else {
+            /**
+             *登录失败:直接在登录页面提示
+             *方式一：以流的方式返回页面
+             *方式二：重定向返回页面：302状态码，浏览器直接前往location
+             */
+            //1
+            String str = "<html lang=\"en\">\n" +
+                    "<head>\n" +
+                    "    <meta charset=\"UTF-8\">\n" +
+                    "    <title>登录页面</title>\n" +
+                    "    <link rel=\"stylesheet\" type=\"text/css\" href=\"src/main/webapp/css/public.css\">\n" +
+                    "    <style>\n" +
+                    "        #login{\n" +
+                    "            border: 1px solid red;\n" +
+                    "            text-align: center;\n" +
+                    "        }\n" +
+                    "    </style>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "<div>\n" +
+                    "    <div id=\"login\">\n" +
+                    "        <h1>欢迎登录</h1>\n" +
+                    "\n" +
+                    "        <form action=\"login\" method=\"POST\">\n" +
+                    "            用户名称：<input type=\"text\" name=\"username\" value='"+username+"' placeholder=\"请在这里输入用户名\"/><span><font color='red'>用户名或密码错误</font></span>\n" +
+                    "            <br/>\n" +
+                    "            用户密码：<input type=\"password\" name=\"password\"/>\n" +
+                    "            <br/>\n" +
+                    "            <input type=\"submit\" value=\"Login\"/>\n" +
+                    "        </form>\n" +
+                    "    </div>\n" +
+                    "    <div class=\"clr\"></div>\n" +
+                    "</div>\n" +
+                    "</body>\n" +
+                    "</html>";
+            //out.println(str);
 
-            out.println("<h1><font color='green'>Login Failed!登录失败</font></h1>");
+            //2:重定向方式，还不能给用户提示（提示用户名密码错误，需要用到js），到JSP之后即可
+            resp.sendRedirect("login.html");
+            //out.println("<h1><font color='green'>Login Failed!登录失败</font></h1>");
         }
 
         /*if ("Admin".equalsIgnoreCase(username) && "550320023".equals(password)) {
