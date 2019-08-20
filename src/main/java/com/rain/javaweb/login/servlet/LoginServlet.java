@@ -63,6 +63,7 @@ public class LoginServlet extends HttpServlet {
         //获取dao对象
         UserDao userDao = new UserDaoImpl();
         User user = userDao.getUserByUsernameAndPassword(username, password);
+
         if (user != null) {
             //登录成功
             System.out.println(user.toString());
@@ -115,7 +116,7 @@ public class LoginServlet extends HttpServlet {
             //绑定数据，将想要交给下一个组件（JSP，Servlet）处理的数据，绑定到request中
             req.setAttribute("login_msg","用户名或密码错误！！！");
             //获取转发器
-            RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 
             //开始转发
             rd.forward(req,resp);

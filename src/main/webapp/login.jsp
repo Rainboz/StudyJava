@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <title>登录页面</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="src/main/webapp/css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
     <style>
         #login {
             border: 1px solid red;
