@@ -1,88 +1,72 @@
 <%--
   Created by IntelliJ IDEA.
-  User: rainboz
-  Date: 19-8-20
-  Time: 上午9:49
+  User: Rainboz
+  Date: 2019/5/10
+  Time: 13:45
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>登录页面</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/public.css">
-    <style>
-        #login {
-            border: 1px solid red;
-            text-align: center;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>登录</title>
 
-        span {
-            color: red;
-        }
-        #test{
-            background-color: #0066FF;
-            height: 200px;
-            width: 200px;
-            margin: 0 auto;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vector.js"></script>
+
 </head>
 <body>
-<div>
-    <div id="login">
-        <h1>欢迎登录</h1>
 
-        <form action="login" method="POST">
-            用户名称：<input type="text" name="username" placeholder="请在这里输入用户名"/>
-            <!--EL表达式默认会从pageScope,requestScope,sessionScope,applicationScope中查找数据
-                如果有数据就输出，为null的话什么也不输出
-                用于代替下面Java代码在页面做出输出操作
-            -->
-            <span>${requestScope.login_msg}</span>
-            <%--
-            <%
-                //获取request对象：request对象可以直接用，看编译后的.java文件，里面已经声明过了
-                String login_msg = (String) request.getAttribute("login_msg");
-            %>
-            <!--login_msg还没有执行request的转发，在转发以后再写出错误信息，一进来要执行下面的表达式，
-            request还没有setAttribute，所以为空，在点击登录后，触发转发请求后，request.setAttribute执行
-            所以要判断login_msg的值是否为空，当它不等于null时，显示错误信息
-             -->
-            <span><%= login_msg == null ? "" : login_msg%></span>
-            --%>
-            <br/>
-            用户密码：<input type="password" name="password"/>
-            <br/>
-            <input type="submit" value="Login"/>
-            <input type="button" value="点我啊" onclick="f();"/>
-            <div id="test" onmouseover="mouseOver();" onmouseout="mouseOut();"></div>
-        </form>
+<div id="container">
+    <div id="output">
+        <div class="containerT">
+            <h1>用户登录</h1>
+            <form class="form" id="entry_form" action="login" method="POST">
+                <input type="text" placeholder="用户名" id="entry_name" value="admin" name="username">
+                <span id="login_span">${requestScope.login_msg}</span>
+                <input type="password" placeholder="密码" id="entry_password" name="password">
+                <button type="submit" id="entry_btn">登录</button>
+                <div id="prompt" class="prompt"></div>
+                <button type="button" id="register_btn">注册</button>
+
+            </form>
+        </div>
     </div>
-    <script>
-        function f() {
-            alert("是谁在点我！！！！！！！！！！！！！");
-        }
-        function mouseOver() {
-            //alert("进来");
-            //使用js获取节点
-            // var div = document.getElementById("test");
-            // div.style.setProperty('background-color','red');
-
-            //使用jQuery获取节点
-            $("#test").css("background-color","red");
-
-        }
-        function mouseOut() {
-            //alert("leave");
-            //使用js获取节点
-            var div = document.getElementById("test");
-            div.style.setProperty('background-color','blue');
-        }
-
-    </script>
-    <div class="clr"></div>
 </div>
+
+<script type="text/javascript">
+    $(function(){
+        Victor("container", "output");   //登录背景函数
+        // $("#entry_name").focus();
+        $(document).keydown(function(event){
+            if(event.keyCode==13){
+                $("#entry_btn").click();
+            }
+        });
+        $("#entry_name").focus(function () {
+            //js
+            //var spanEle = document.getElementById("login_span");
+            // spanEle.innerHTML="";
+            var spanEle = $("#login_span");
+            spanEle.hide();
+
+        });
+        $("#register_btn").click(function () {
+            $("#login_span").hide();
+        });
+    });
+    function closeLoginMsg() {
+        //jquery
+        // $("#login_span").innerHTML="544";
+        //js
+        // var spanEle = document.getElementById("login_span");
+        // spanEle.innerHTML="";
+    }
+
+</script>
 </body>
 </html>

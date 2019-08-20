@@ -67,7 +67,8 @@ public class LoginServlet extends HttpServlet {
         if (user != null) {
             //登录成功
             System.out.println(user.toString());
-            out.println("<h1><font color='green'>Login success!登录成功</font></h1>");
+            //out.println("<h1><font color='green'>Login success!登录成功</font></h1>");
+            out.println("<h1><font color='green'>你绿了！</font></h1>");
         } else {
             /**
              *登录失败:直接在登录页面提示
@@ -107,7 +108,7 @@ public class LoginServlet extends HttpServlet {
             //out.println(str);
 
             //2:重定向方式，还不能给用户提示（提示用户名密码错误，需要用到js），到JSP之后即可
-            //resp.sendRedirect("login.jsp");
+            //resp.sendRedirect("register.jsp");
 
 
             /**
@@ -116,7 +117,7 @@ public class LoginServlet extends HttpServlet {
             //绑定数据，将想要交给下一个组件（JSP，Servlet）处理的数据，绑定到request中
             req.setAttribute("login_msg","用户名或密码错误！！！");
             //获取转发器
-            RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
 
             //开始转发
             rd.forward(req,resp);
