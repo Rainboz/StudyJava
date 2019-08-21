@@ -74,6 +74,8 @@
         }
 
         $(function () {
+            var usernameFlag = false;
+            var passwordFlag = false;
             //用户名失去焦点发送异步请求
             $("#username").blur(function () {
                 var username = $("#username").val();
@@ -84,9 +86,37 @@
                     data: "username=" + username,
                     success: function (data) {
                         //会将服务器返回的数据保存在data中
-                        $("#register_span").html(data);
+                        if (data == 0) {//类型转换
+                            $("#register_span").html("用户名可以使用");
+                            usernameFlag = true;
+                        } else {
+                            $("#register_span").html("用户名不可以使用");
+                        }
                     }
                 });
+            });
+            //两次密码输入不一致也能注册成功
+            $("#repassword").blur(function () {
+                var password = $("#password").val();
+                var repassword = $("#repassword").val();
+                console.log(password != null);
+                console.log(password);
+                console.log(password != "");
+                console.log(password == repassword);
+                if (password != undefined && password != "" && password == repassword) {
+                    $("#pass_span").html("密码一致");
+                    passwordFlag = true;
+                } else {
+                    $("#pass_span").html("密码不一致");
+                }
+            });
+            $("#entry_form").submit(function () {
+                /*if (usernameFlag && passwordFlag) {
+                    return true;
+                } else {
+                    return false
+                }*/
+                return usernameFlag && passwordFlag;
             });
         });
     </script>
@@ -99,11 +129,12 @@
         <div class="containerT">
             <h1>用户注册</h1>
             <form class="form" id="entry_form" action="register" method="POST">
-                <%--                <input id="username" type="text" placeholder="用户名" name="username" onblur="checkUsername();">--%>
-                <input id="username" type="text" placeholder="用户名" name="username">
+                <%--<input id="username" type="text" placeholder="用户名" name="username" onblur="checkUsername();">--%>
+                <input id="username" type="text" placeholder="用户名" name="username"/>
                 <span id="register_span">${requestScope.register_msg}</span>
-                <input type="password" placeholder="密码" name="password">
-                <input type="password" placeholder="确认密码" name="repassword">
+                <input id="password" type="password" placeholder="密码" name="password"/>
+                <input id="repassword" type="password" placeholder="确认密码" name="repassword"/>
+                <span id="pass_span"></span>
                 <button type="submit" id="entry_btn">注册</button>
 
                 <div id="prompt" class="prompt"></div>

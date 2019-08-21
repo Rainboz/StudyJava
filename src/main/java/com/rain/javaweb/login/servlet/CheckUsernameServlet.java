@@ -30,9 +30,9 @@ public class CheckUsernameServlet extends HttpServlet {
         String msg = "";
         if (user == null) {
             //可用
-            msg = "用户名可用";
+            msg = "0";
         } else {
-            msg = "用户名已存在";
+            msg = "1";
         }
 
         response.setContentType("text/html;charset=utf-8");
