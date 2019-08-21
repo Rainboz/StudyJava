@@ -54,8 +54,18 @@
 		<servlet-name>registerServlet</servlet-name>
 		<servlet-class>com.rain.javaweb.login.servlet.RegisterServlet</servlet-class>
 	</servlet>
-	<servlet-mapping>
+    <servlet-mapping>
 		<servlet-name>registerServlet</servlet-name>
 		<url-pattern>/register</url-pattern>
 	</servlet-mapping>
+    
+    <!--校验用户名-->
+    <servlet>
+        <servlet-name>CheckUsernameServlet</servlet-name>
+        <servlet-class>com.rain.javaweb.login.servlet.CheckUsernameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckUsernameServlet</servlet-name>
+        <url-pattern>/checkUsername</url-pattern>
+    </servlet-mapping>
 </web-app>
