@@ -18,7 +18,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/vector.js"></script>
     <style>
-        #login_span {
+        #register_span {
             color: red;
         }
     </style>
@@ -26,23 +26,20 @@
         //获取xhr对象
         function getXhr() {
             var xhr = new XMLHttpRequest();
-           // alert(xhr);
+            // alert(xhr);
             return xhr;
         }
 
         function checkUsername() {
-            //获取
+            //获取用户输入的用户名
             var username = document.getElementById("username").value;
             //发送异步请求进行校验
             var xhr = getXhr();
-
             //get实例
             //设置请求信息
             xhr.open("get", "checkUsername?username=" + username, true);
-
             //发送请求
             xhr.send();
-
             //监听readyState的状态
             xhr.onreadystatechange = function () {//匿名函数
                 if (xhr.readyState == 4) {//响应处理完成
@@ -52,10 +49,46 @@
                         //将信息显示到register_span中
                         document.getElementById("register_span").innerHTML = msg;
                     }
-
                 }
             }
         }
+
+        function checkUsernamePost() {
+            //注意2点：
+            //1.post参数写在send里面
+            //2.请求头加上
+            var username = $("#username").val();
+            alert(username);
+            var xhr = getXhr();
+            xhr.open("post", "checkUsername", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-from-urlencoded");
+            xhr.send("username=" + username);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        var text = xhr.responseText;
+                        alert(text);
+                    }
+                }
+            }
+        }
+
+        $(function () {
+            //用户名失去焦点发送异步请求
+            $("#username").blur(function () {
+                var username = $("#username").val();
+                //发送异步请求
+                $.ajax({
+                    url: "checkUsername",
+                    type: "post",
+                    data: "username=" + username,
+                    success: function (data) {
+                        //会将服务器返回的数据保存在data中
+                        $("#register_span").html(data);
+                    }
+                });
+            });
+        });
     </script>
 
 </head>
@@ -66,7 +99,8 @@
         <div class="containerT">
             <h1>用户注册</h1>
             <form class="form" id="entry_form" action="register" method="POST">
-                <input id="username" type="text" placeholder="用户名" name="username" onblur="checkUsername();">
+                <%--                <input id="username" type="text" placeholder="用户名" name="username" onblur="checkUsername();">--%>
+                <input id="username" type="text" placeholder="用户名" name="username">
                 <span id="register_span">${requestScope.register_msg}</span>
                 <input type="password" placeholder="密码" name="password">
                 <input type="password" placeholder="确认密码" name="repassword">
@@ -74,7 +108,7 @@
 
                 <div id="prompt" class="prompt"></div>
                 <button hidden type="button" id="xhr" onclick="getXhr();">test XHR</button>
-                <button hidden type="button" id="btn1">test</button>
+                <button type="button" id="btn1" onclick="checkUsernamePost();">test post</button>
 
             </form>
 
@@ -85,7 +119,7 @@
 <script type="text/javascript">
     $(function () {
         Victor("container", "output");   //注册背景函数
-        // $("#entry_name").focus();
+        $("#username").focus();
         $(document).keydown(function (event) {
             if (event.keyCode == 13) {
                 $("#entry_btn").click();
