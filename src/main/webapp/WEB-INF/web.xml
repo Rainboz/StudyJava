@@ -68,4 +68,14 @@
         <servlet-name>CheckUsernameServlet</servlet-name>
         <url-pattern>/checkUsername</url-pattern>
     </servlet-mapping>
+    
+    <!--student-->
+    <servlet>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>com.rain.javaweb.login.servlet.StudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/getStudentList</url-pattern>
+    </servlet-mapping>
 </web-app>

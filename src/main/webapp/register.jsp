@@ -95,7 +95,7 @@
                     }
                 });
             });
-            //两次密码输入不一致也能注册成功
+            //解决：两次密码输入不一致也能注册成功
             $("#repassword").blur(function () {
                 var password = $("#password").val();
                 var repassword = $("#repassword").val();
