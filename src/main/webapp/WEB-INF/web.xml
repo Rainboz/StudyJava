@@ -76,6 +76,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>StudentServlet</servlet-name>
-        <url-pattern>/getStudentList</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -13,55 +13,76 @@
     <link rel="stylesheet" type="text/css" href="css/student.css">
     <script>
         $(function () {
+           selectStuList();
+        });
+        function selectStuList() {
             var selectFlag = false;
             // $("#select").click(function () {
 
-                $.ajax({
-                    url: "getStudentList",
-                    type: "get",
-                    data: "",
-                    // dataType:"json",
-                    success: function (stuList) {
-                        //由JSON字符串转换为JSON对象
-                        var obj = JSON.parse(stuList);
+            $.ajax({
+                url: "getStudentList.do",
+                type: "get",
+                data: "",
+                // dataType:"json",
+                success: function (stuList) {
+                    //由JSON字符串转换为JSON对象
+                    var obj = JSON.parse(stuList);
 
-                        var x;
-                        var trHTML = "";
-                        //获取
-                        for (x in obj) {
-                            console.log(obj[x].name);
-                            trHTML += "<tr class='data'>" +
-                                "<td>" + obj[x].id + "</td>" +
-                                "<td>" + obj[x].stuId + "</td>" +
-                                "<td>" + obj[x].name + "</td>" +
-                                "<td>" + obj[x].sex + "</td>" +
-                                "<td>" + obj[x].age + "</td>" +
-                                "<td>" + obj[x].phone + "</td>" +
-                                "<td>" + "<button onclick='update();'>" + "修改" + "</button>" +
-                                "<button>" + "删除" + "</button>" +
-                                "</td>" +
-                                "</tr>";
-                        }
-                        /**
-                         *查到的信息一一对应到表格中
-                         * [BUG]:查询会循环添加，需要加判断条件
-                         * [解决]:不用点击事件，页面加载完毕加载数据
-                         */
-                        $("#stu_table").append(trHTML);
-                        // if (!selectFlag) {
-                        //     $("#stu_table").append(trHTML);
-                        //     return true;
-                        // } else {
-                        //     return false;
-                        // }
-                        // selectFlag = true;
-
+                    var x;
+                    var trHTML = "";
+                    //获取
+                    for (x in obj) {
+                        console.log(obj[x].name);
+                        trHTML += "<tr class='data'>" +
+                            "<td>" + obj[x].id + "</td>" +
+                            "<td>" + obj[x].stuId + "</td>" +
+                            "<td>" + obj[x].name + "</td>" +
+                            "<td>" + obj[x].sex + "</td>" +
+                            "<td>" + obj[x].age + "</td>" +
+                            "<td>" + obj[x].phone + "</td>" +
+                            "<td>" +
+                            "<input type='button' value='修改'  onclick='updateStu(" + obj[x].stuId + ");'/>" +
+                            "<input type='button' value='删除'  onclick='deleteStu(" + obj[x].stuId + ");' />" +
+                            "</td>" +
+                            "</tr>";
                     }
-                });
-            // });
-        });
+                    /**
+                     *查到的信息一一对应到表格中
+                     * [BUG]:查询会循环添加，需要加判断条件
+                     * [解决]:不用点击事件，页面加载完毕加载数据
+                     */
+                    $("#stu_table").append(trHTML);
+                    // if (!selectFlag) {
+                    //     $("#stu_table").append(trHTML);
+                    //     return true;
+                    // } else {
+                    //     return false;
+                    // }
+                    // selectFlag = true;
 
-        function update() {
+                }
+            });
+            // });
+        }
+        function updateStu(stuId) {
+            console.log(stuId);
+        }
+
+        function deleteStu(stuId) {
+            console.log(stuId);
+            $.ajax({
+                url: "deleteStu.do",
+                type: "post",
+                data: "method=deleteStu&stuId=" + stuId,
+                success: function (data) {
+                    //response
+                    /**
+                     * [BUG]:调用会循环添加，需要加判断条件
+                     * [需求]：删除后自动刷新，局部刷新数据
+                     */
+                    // selectStuList();
+                }
+            });
 
         }
     </script>
@@ -76,7 +97,7 @@
         </div>
     </div>
     <div class="student">
-        <table id="stu_table" height cellspacing="0" cellpadding="10">
+        <table id="stu_table" cellspacing="0" cellpadding="10">
             <tr>
                 <th>ID</th>
                 <th>学号</th>
@@ -86,17 +107,9 @@
                 <th>电话</th>
                 <th>操作</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
         </table>
     </div>
+    <a href="getStudengList.do">查询</a>
 </section>
 </body>
 </html>
