@@ -99,10 +99,15 @@ public class StudentServlet extends HttpServlet {
         Student student = new Student(stuId,name,sex,age,phone);
         StudentDao studentDao = new StudentDaoImpl();
         int i = studentDao.updateStudent(student);
+        String msg_update = "";
         if (i == 0){
             System.out.println("更新失败");
+            msg_update = "0";
+            response.getWriter().println(msg_update);
         }else {
             System.out.println("更新成功");
+            msg_update = "1";
+            response.getWriter().println(msg_update);
         }
     }
     private void selectByStuId(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException{

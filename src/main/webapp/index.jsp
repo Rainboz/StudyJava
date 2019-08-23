@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" href="css/student.css">
     <script>
         $(function () {
+
            selectStuList();
+
         });
         function selectStuList() {
             var selectFlag = false;
@@ -32,14 +34,14 @@
                     var trHTML = "";
                     //获取
                     for (x in obj) {
-                        console.log(obj[x]);
+                        // console.log(obj[x]);
                         var id = obj[x].id;
                         var stuId = obj[x].stuId;
                         var name = obj[x].name
                         var sex = obj[x].sex;
                         var age = obj[x].age;
                         var phone = obj[x].phone;
-                        console.log(name);
+                        // console.log(name);
                         trHTML += "<tr class='data'>" +
                             "<td>" + id + "</td>" +
                             "<td>" + stuId + "</td>" +
@@ -73,33 +75,6 @@
         }
 
         /**
-         * 更根据stuId更新学生信息
-         * 点击事件：点击修改按钮，显示修改信息列表(需要请求根据stuId查询方法)
-         * 点击提交按钮，完成修改操作
-         * @param stuId
-         */
-        function updateStu(stuId) {
-            console.log(stuId);
-            $.ajax({
-                url:"selectByStuId.do",
-                type:"post",
-                data:{"stuId":stuId},
-                // data:"method=selectByStuId&stuId="+stuId,
-                dataType:"json",
-                success:function (data) {
-                    var strStu = JSON.stringify(data);
-                    var objStu = JSON.parse(strStu);
-                    console.log(objStu);
-
-                },
-                error:function (xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-
-        }
-
-        /**
          * 删除学生信息
          * @param stuId
          */
@@ -121,7 +96,149 @@
             });
 
         }
+
+        /**
+         * TODO 根据stuId更新学生信息
+         * @param stuId
+         */
+        function updateStu(stuId) {
+            console.log(stuId);
+            //[功能1]:点击事件：点击修改按钮，显示修改信息列表(需要请求根据stuId查询方法)
+            $.ajax({
+                url:"selectByStuId.do",
+                type:"post",
+                data:{"stuId":stuId},
+                // data:"method=selectByStuId&stuId="+stuId,
+                dataType:"json",
+                success:function (data) {
+                    var update_sub_flag = false;
+
+                    var strStu = JSON.stringify(data);
+                    var objStu = JSON.parse(strStu);
+                    // console.log(objStu.stuId);
+                    // console.log(objStu.name);
+                    //取数据
+                    var stuId = objStu.stuId;
+                    var name = objStu.name;
+                    var sex = objStu.sex;
+                    var age = objStu.age;
+                    var phone = objStu.phone;
+                    // 点击提交按钮，完成修改操作
+                    var str = "<form id=\"update_form_stuId\" class=\"update_form\">\n" +
+                        "            <p>\n" +
+                        "                <label>学号</label>\n" +
+                        "                <input type=\"text\" name=\"stuId\" value='' placeholder='"+stuId+"'/>\n" +
+                        "            </p>\n" +
+                        "            <p>\n" +
+                        "                <label>姓名</label>\n" +
+                        "                <input type=\"text\" name=\"name\" value='' placeholder='"+name+"' />\n" +
+                        "            </p>\n" +
+                        "            <p>\n" +
+                        "                <label>性别</label>\n" +
+                        "                <input type=\"text\" name=\"sex\" value='' placeholder='"+sex+"'/>\n" +
+                        "            </p>\n" +
+                        "            <p>\n" +
+                        "                <label>年龄</label>\n" +
+                        "                <input type=\"text\" name=\"age\" value='' placeholder='"+age+"'/>\n" +
+                        "            </p>\n" +
+                        "            <p>\n" +
+                        "                <label>手机号</label>\n" +
+                        "                <input type=\"text\" name=\"phone\" value='' placeholder='"+phone+"'/>\n" +
+                        "            </p>\n" +
+                        "            <p >\n" +
+                        "                <input id='confirm_update' type=\"button\" name=\"phone\" value='确认修改' />\n" +
+                        "            </p>\n" +
+                        "        </form>";
+                    //添加html
+                    $(".updateStu").append(str);
+
+                    //[功能2]:为"确认修改"绑定事件
+                    $("#confirm_update").click(function () {
+                        var stuId = $("input[name='stuId']").attr('placeholder');
+                        var name = $("input[name='name']").attr('placeholder');
+                        var sex = $("input[name='sex']").attr('placeholder');
+                        var age = $("input[name='age']").attr('placeholder');
+                        var phone = $("input[name='phone']").attr('placeholder');
+
+                        //----------------------
+                        var stuId_val = $("input[name='stuId']").val();
+                        var name_val = $("input[name='name']").val();
+                        var sex_val = $("input[name='sex']").val();
+                        var age_val = $("input[name='age']").val();
+                        var phone_val = $("input[name='phone']").val();
+                        //----------------------
+
+                        var str = '[{"stuId":'+stuId+',"name":'+name+',"sex":'+sex+',"age":'+age+',"phone":'+phone+'}]';
+                        var jsonStr = JSON.stringify(str);
+                        var jsonObj = JSON.parse(jsonStr);
+                        // console.log(str);
+                        // console.log(jsonStr);
+                        // console.log(jsonObj)
+                        // console.log("name: "+name);
+
+                        // console.log(stuId_val != "" );
+                        // console.log(name_val != "" );
+                        // console.log(sex_val != "");
+                        // console.log(age_val != "");
+                        // console.log( phone_val != "");
+                        /**
+                         * [功能3]:判断修改信息的完整性
+                         */
+                        if (stuId_val != null && name_val != null && sex_val != null && age_val != null && phone_val != null &&
+                            stuId_val != "" && name_val != "" && sex_val != "" && age_val != "" && phone_val != "" &&
+                            stuId_val != undefined && name_val != undefined && sex_val != undefined && age_val != undefined && phone_val != undefined){
+                            //都不为空则能够提交修改
+                            update_sub_flag = true;
+                            console.log("信息完整");
+                            //请求updateStu servlet完成更新学生数据操作
+                            /**
+                             * 请求updateStu servlet完成更新学生数据操作
+                             * [BUG]:还是之前的问题，点击"修改"按钮,会出现多次调用updateStu()方法,页面会多次插入信息表
+                             */
+                            $.ajax({
+                                url:"updateStu.do",
+                                type:"post",
+                                data:{"stuId":stuId,"name":name,"sex":sex,"age":age,"phone":phone},
+                                success:function (data) {
+                                    if (data = 1){
+                                        alert("更新成功！");
+                                    } else {
+                                        alert("更新失败！");
+                                    }
+                                }
+                            });
+
+                        }else {
+                            //信息填写不完整，不允许提交修改,并提示没有填写的信息
+                            console.log("信息填写不完整");
+                        }
+
+                        //修改提交表单
+                        $("#update_form_stuId").submit(function () {
+                            return update_sub_flag;
+                        });
+                    });
+                },
+                error:function (xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
     </script>
+    <style>
+        .updateStu{
+            width: 30%;
+            margin: 0px auto;
+            border: 1pt solid #c0c0c0;
+        }
+        .updateStu p{
+            vertical-align:middle;
+            padding:10px 10px;
+        }
+        .update_form p{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -144,8 +261,38 @@
                 <th>操作</th>
             </tr>
         </table>
+
     </div>
-    <a href="getStudengList.do">查询</a>
+    <div class="updateStu">
+        <!--
+        <form id="update_form_stuId" class="update_form">
+            <p>
+                <label>学号</label>
+                <input type="text" name="stuId" value="" placeholder="stuId"/>
+            </p>
+            <p>
+                <label>姓名</label>
+                <input type="text" name="name" value="" placeholder="name" />
+            </p>
+            <p>
+                <label>性别</label>
+                <input type="text" name="sex" value="" placeholder="sex"/>
+            </p>
+            <p>
+                <label>年龄</label>
+                <input type="text" name="age" value="" placeholder="age"/>
+            </p>
+            <p>
+                <label>手机号</label>
+                <input type="text" name="phone" value="" placeholder="phone"/>
+            </p>
+            <p id="confirm_update">
+                <input type="button" name="phone" value="确认修改" />
+            </p>
+        </form>
+        -->
+    </div>
+    <a hidden href="getStudentList.do">查询</a>
 </section>
 </body>
 </html>
