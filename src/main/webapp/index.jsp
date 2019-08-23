@@ -32,17 +32,24 @@
                     var trHTML = "";
                     //获取
                     for (x in obj) {
-                        console.log(obj[x].name);
+                        console.log(obj[x]);
+                        var id = obj[x].id;
+                        var stuId = obj[x].stuId;
+                        var name = obj[x].name
+                        var sex = obj[x].sex;
+                        var age = obj[x].age;
+                        var phone = obj[x].phone;
+                        console.log(name);
                         trHTML += "<tr class='data'>" +
-                            "<td>" + obj[x].id + "</td>" +
-                            "<td>" + obj[x].stuId + "</td>" +
-                            "<td>" + obj[x].name + "</td>" +
-                            "<td>" + obj[x].sex + "</td>" +
-                            "<td>" + obj[x].age + "</td>" +
-                            "<td>" + obj[x].phone + "</td>" +
+                            "<td>" + id + "</td>" +
+                            "<td>" + stuId + "</td>" +
+                            "<td>" + name + "</td>" +
+                            "<td>" + sex + "</td>" +
+                            "<td>" + age + "</td>" +
+                            "<td>" + phone + "</td>" +
                             "<td>" +
-                            "<input type='button' value='修改'  onclick='updateStu(" + obj[x].stuId + ");'/>" +
-                            "<input type='button' value='删除'  onclick='deleteStu(" + obj[x].stuId + ");' />" +
+                            "<input id='updateStu' type='button' onclick='updateStu(" + stuId + ");'  value='修改'  />" +
+                            "<input type='button' value='删除'  onclick='deleteStu(" + stuId + ");' />" +
                             "</td>" +
                             "</tr>";
                     }
@@ -64,12 +71,41 @@
             });
             // });
         }
+
+        /**
+         * 更根据stuId更新学生信息
+         * 点击事件：点击修改按钮，显示修改信息列表(需要请求根据stuId查询方法)
+         * 点击提交按钮，完成修改操作
+         * @param stuId
+         */
         function updateStu(stuId) {
             console.log(stuId);
+            $.ajax({
+                url:"selectByStuId.do",
+                type:"post",
+                data:{"stuId":stuId},
+                // data:"method=selectByStuId&stuId="+stuId,
+                dataType:"json",
+                success:function (data) {
+                    var strStu = JSON.stringify(data);
+                    var objStu = JSON.parse(strStu);
+                    console.log(objStu);
+
+                },
+                error:function (xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+
         }
 
+        /**
+         * 删除学生信息
+         * @param stuId
+         */
         function deleteStu(stuId) {
             console.log(stuId);
+
             $.ajax({
                 url: "deleteStu.do",
                 type: "post",

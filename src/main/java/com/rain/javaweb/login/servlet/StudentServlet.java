@@ -28,26 +28,28 @@ public class StudentServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*//1. 获取ServletPath
-        String url = request.getServletPath();
+        //1. 获取ServletPath
+        String method = request.getServletPath();
 
         //2. 去除/和.do
-        String methodName = url.substring(1);
-        methodName = methodName.substring(0,methodName.length()-3);*/
+        //(此时处理的请求是查询 query.do)
+        System.out.println("request.getServletPath()获取的值为: " + method);
+        //2.通过字符串截取，把方法名 query 截取出来
+        method = method.substring(1, method.length()-3);
 
+        System.out.println("截取后的值为： "+ method);
 
+/*
         String url = request.getRequestURI();
-        String methodName = url.substring(url.lastIndexOf("/")+1,url.lastIndexOf("."));
-        Method method =null;
+        String methodName = url.substring(url.lastIndexOf("/")+1,url.lastIndexOf("."));*/
+        Method m =null;
 
         try {
-            System.out.println(url);
-            System.out.println(methodName);
             //3. 利用反射获取methodName对应的方法:这里用private声明方法,使用getDeclaredMethod()
-            method = getClass().getDeclaredMethod(methodName,HttpServletRequest.class,HttpServletResponse.class);
+            m = this.getClass().getDeclaredMethod(method,HttpServletRequest.class,HttpServletResponse.class);
 
             //4. 利用反射调用对应方法
-            method.invoke(this,request,response);
+            m.invoke(this,request,response);
 
         } catch (Exception e) {
             throw new RuntimeException("调用方法出错！");
@@ -70,11 +72,12 @@ public class StudentServlet extends HttpServlet {
             Gson gson = new Gson();
             String str = gson.toJson(studentList);
             response.getWriter().println(str);
+
             System.out.println(str);
 
         }
     }
-    private void deleteStu(HttpServletRequest request, HttpServletResponse response) {
+    private void deleteStu(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         //获取ajax删除请求携带的参数
         String method = request.getParameter("method");
         String stuId = request.getParameter("stuId");
@@ -85,6 +88,41 @@ public class StudentServlet extends HttpServlet {
         }else {
             System.out.println("删除失败");
         }
+    }
+    private void updateStu(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException{
+        int stuId = Integer.parseInt(request.getParameter("stuId"));
+        String name = request.getParameter("name");
+        String sex = request.getParameter("sex");
+        int age = Integer.parseInt(request.getParameter("age"));
+        String phone = request.getParameter("phone");
+
+        Student student = new Student(stuId,name,sex,age,phone);
+        StudentDao studentDao = new StudentDaoImpl();
+        int i = studentDao.updateStudent(student);
+        if (i == 0){
+            System.out.println("更新失败");
+        }else {
+            System.out.println("更新成功");
+        }
+    }
+    private void selectByStuId(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException{
+        StudentDao studentDao = new StudentDaoImpl();
+
+        int stuId  = Integer.parseInt(request.getParameter("stuId"));
+        Student student = studentDao.selectByStuId(stuId);
+
+        //格式JSON
+        Gson gson = new Gson();
+        String s = gson.toJson(student);
+
+        //设置响应编码,防止中文乱码
+        response.setContentType("text/html;charset=utf-8");
+        response.getWriter().println(s);
+        System.out.println(s);
+    }
+
+    private void selectById(HttpServletRequest request ,HttpServletResponse response){
+        System.out.println("selectById");
     }
 
 }

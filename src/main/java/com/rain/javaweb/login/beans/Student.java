@@ -26,6 +26,14 @@ public class Student {
         this.phone = phone;
     }
 
+    public Student(Integer stuId, String name, String sex, Integer age, String phone) {
+        this.stuId = stuId;
+        this.name = name;
+        this.sex = sex;
+        this.age = age;
+        this.phone = phone;
+    }
+
     public Integer getId() {
         return id;
     }
