@@ -80,21 +80,24 @@
          */
         function deleteStu(stuId) {
             console.log(stuId);
-
-            $.ajax({
-                url: "deleteStu.do",
-                type: "post",
-                data: "method=deleteStu&stuId=" + stuId,
-                success: function (data) {
-                    //response
-                    /**
-                     * [BUG]:调用会循环添加，需要加判断条件
-                     * [需求]：删除后自动刷新，局部刷新数据
-                     */
-                    // selectStuList();
-                }
-            });
-
+            if (confirm("确定要删除吗？")) {
+                $.ajax({
+                    url: "deleteStu.do",
+                    type: "post",
+                    data: "method=deleteStu&stuId=" + stuId,
+                    success: function (data) {
+                        //response
+                        /**
+                         * [BUG]:调用会循环添加，需要加判断条件
+                         * [需求]：删除后自动刷新，局部刷新数据
+                         */
+                        // selectStuList();
+                    }
+                });
+                return true;
+            }else {
+                return false;
+            }
         }
 
         /**
@@ -126,8 +129,8 @@
                     // 点击提交按钮，完成修改操作
                     var str = "<form id=\"update_form_stuId\" class=\"update_form\">\n" +
                         "            <p>\n" +
-                        "                <label>学号</label>\n" +
-                        "                <input type=\"text\" name=\"stuId\" value='' placeholder='"+stuId+"'/>\n" +
+                        "                <label>学号: </label>\n" +"<span id='stu_span'>"+stuId+"</span>"+
+                        "                <input hidden type=\"text\" name=\"stuId\" value='' placeholder='"+stuId+"'/>\n" +
                         "            </p>\n" +
                         "            <p>\n" +
                         "                <label>姓名</label>\n" +
@@ -161,7 +164,6 @@
                         var phone = $("input[name='phone']").attr('placeholder');
 
                         //----------------------
-                        var stuId_val = $("input[name='stuId']").val();
                         var name_val = $("input[name='name']").val();
                         var sex_val = $("input[name='sex']").val();
                         var age_val = $("input[name='age']").val();
@@ -176,17 +178,16 @@
                         // console.log(jsonObj)
                         // console.log("name: "+name);
 
-                        // console.log(stuId_val != "" );
-                        // console.log(name_val != "" );
+
                         // console.log(sex_val != "");
                         // console.log(age_val != "");
                         // console.log( phone_val != "");
                         /**
-                         * [功能3]:判断修改信息的完整性
+                         * [功能3]:判断修改信息的完整性,stuId不可变，sql的判断条件
                          */
-                        if (stuId_val != null && name_val != null && sex_val != null && age_val != null && phone_val != null &&
-                            stuId_val != "" && name_val != "" && sex_val != "" && age_val != "" && phone_val != "" &&
-                            stuId_val != undefined && name_val != undefined && sex_val != undefined && age_val != undefined && phone_val != undefined){
+                        if (name_val != null && sex_val != null && age_val != null && phone_val != null &&
+                            name_val != "" && sex_val != "" && age_val != "" && phone_val != "" &&
+                            name_val != undefined && sex_val != undefined && age_val != undefined && phone_val != undefined){
                             //都不为空则能够提交修改
                             update_sub_flag = true;
                             console.log("信息完整");
@@ -198,10 +199,17 @@
                             $.ajax({
                                 url:"updateStu.do",
                                 type:"post",
-                                data:{"stuId":stuId,"name":name,"sex":sex,"age":age,"phone":phone},
+                                data:{"stuId":stuId,"name":name_val,"sex":sex_val,"age":age_val,"phone":phone_val},
                                 success:function (data) {
+                                    console.log(data);
                                     if (data = 1){
                                         alert("更新成功！");
+                                        //异步刷新数据
+                                        /**
+                                         * [BUG]:调用会循环添加，需要加判断条件
+                                         * [需求]：删除后自动刷新，局部刷新数据
+                                         */
+                                        // selectStuList();
                                     } else {
                                         alert("更新失败！");
                                     }
@@ -211,6 +219,7 @@
                         }else {
                             //信息填写不完整，不允许提交修改,并提示没有填写的信息
                             console.log("信息填写不完整");
+                            alert("信息填写不完整");
                         }
 
                         //修改提交表单
@@ -221,6 +230,75 @@
                 },
                 error:function (xhr) {
                     console.log(xhr.responseText);
+                }
+            });
+        }
+        $(function () {
+            $("#addStudent").click(function () {
+                // 点击提交按钮，完成添加操作
+                var str = "<form id=\"add_form_stu\" class=\"add_form\">\n" +
+                    "            <p>\n" +
+                    "                <label>学号: </label>\n" +
+                    "                <input type=\"text\" name=\"stuId\" value='' placeholder='学号'/>\n" +
+                    "            </p>\n" +
+                    "            <p>\n" +
+                    "                <label>姓名</label>\n" +
+                    "                <input type=\"text\" name=\"name\" value='' placeholder='姓名' />\n" +
+                    "            </p>\n" +
+                    "            <p>\n" +
+                    "                <label>性别</label>\n" +
+                    "                <input type=\"text\" name=\"sex\" value='' placeholder='性别'/>\n" +
+                    "            </p>\n" +
+                    "            <p>\n" +
+                    "                <label>年龄</label>\n" +
+                    "                <input type=\"text\" name=\"age\" value='' placeholder='年龄'/>\n" +
+                    "            </p>\n" +
+                    "            <p>\n" +
+                    "                <label>手机号</label>\n" +
+                    "                <input type=\"text\" name=\"phone\" value='' placeholder='手机号'/>\n" +
+                    "            </p>\n" +
+                    "            <p >\n" +
+                    "                <input id='confirm_add' type=\"button\" name=\"phone\" value='添加学生' />\n" +
+                    "            </p>\n" +
+                    "        </form>";
+                //添加html
+                $(".addStu").append(str);
+
+                //提交
+                $("#confirm_add").click(function () {
+                    addStudent();
+                });
+            });
+        });
+
+        /**
+         * [BUG]:提交空值500+提交无效数据成功
+         *
+         */
+        function addStudent() {
+            //获取用户提交的信息
+            var stuId = $("input[name='stuId']").val();
+            var name = $("input[name='name']").val();
+            var sex = $("input[name='sex']").val();
+            var age = $("input[name='age']").val();
+            var phone = $("input[name='phone']").val();
+
+            // console.log(stuId);
+            // console.log(name);
+            // console.log(sex);
+            // console.log(age);
+            // console.log(phone);
+            $.ajax({
+                url:"addStudent.do",
+                type:"post",
+                data:{"stuId":stuId,"name":name,"sex":sex,"age":age,"phone":phone},
+                success:function (data) {
+                    if (data = 1){//添加成功
+                        console.log("添加成功");
+                        alert("添加成功");
+                    } else {
+                        alert("添加失败");
+                    }
                 }
             });
         }
@@ -238,6 +316,19 @@
         .update_form p{
             text-align: center;
         }
+
+        .addStu{
+            width: 30%;
+            margin: 0 auto;
+            border: 1pt solid #c0c0c0;
+        }
+        .addStu p{
+            vertical-align:middle;
+            padding:10px 10px;
+        }
+        .addStu p{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -245,7 +336,7 @@
 <section id="all" class="content">
     <div class="head">
         <div class="head_bar">
-            <button id="select" type="button" class="button" style="vertical-align: middle;font-size: 14px;">查询</button>
+            <button id="addStudent" type="button" class="button" style="vertical-align: middle;font-size: 14px;">添加学生</button>
             <button type="button" class="button" style="vertical-align: middle;font-size: 14px;">隐藏</button>
         </div>
     </div>
@@ -291,6 +382,9 @@
             </p>
         </form>
         -->
+    </div>
+    <div class="addStu">
+
     </div>
     <a hidden href="getStudentList.do">查询</a>
 </section>

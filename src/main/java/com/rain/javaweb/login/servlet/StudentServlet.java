@@ -105,8 +105,9 @@ public class StudentServlet extends HttpServlet {
             msg_update = "0";
             response.getWriter().println(msg_update);
         }else {
-            System.out.println("更新成功");
+            System.out.println("更新成功11111111");
             msg_update = "1";
+            System.out.println(student.toString());
             response.getWriter().println(msg_update);
         }
     }
@@ -128,6 +129,32 @@ public class StudentServlet extends HttpServlet {
 
     private void selectById(HttpServletRequest request ,HttpServletResponse response){
         System.out.println("selectById");
+    }
+    private void addStudent(HttpServletRequest request ,HttpServletResponse response)throws IOException, ServletException{
+        Student stu1 = new Student();
+        StudentDao studentDao = new StudentDaoImpl();
+        int stuId = Integer.parseInt(request.getParameter("stuId"));
+        String name = request.getParameter("name");
+        String sex = request.getParameter("sex");
+        int age = Integer.parseInt(request.getParameter("age"));
+        String phone = request.getParameter("phone");
+
+        stu1.setStuId(stuId);
+        stu1.setName(name);
+        stu1.setSex(sex);
+        stu1.setAge(age);
+        stu1.setPhone(phone);
+        boolean b = studentDao.addStudent(stu1);
+        String msg_addStu = "";
+        System.out.println("是否添加成功： " + b);
+        if (b){
+            //添加成功
+            msg_addStu = "1";
+            response.getWriter().println(msg_addStu);
+        }else {
+            msg_addStu = "0";
+            response.getWriter().println(msg_addStu);
+        }
     }
 
 }

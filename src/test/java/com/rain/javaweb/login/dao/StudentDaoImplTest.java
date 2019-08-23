@@ -54,7 +54,7 @@ public class StudentDaoImplTest {
         System.out.println("是否添加成功： " + b);*/
         Student student = new Student();
         //使用局部变量，保证每次获取的值是随机的
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 2; i++) {
             int stuId = (int) DataUtil.getNum(8);
             String name = DataUtil.getRandomJianHan(3);
             String sex = DataUtil.getSex();
