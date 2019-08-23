@@ -139,21 +139,25 @@ public class StudentServlet extends HttpServlet {
         int age = Integer.parseInt(request.getParameter("age"));
         String phone = request.getParameter("phone");
 
-        stu1.setStuId(stuId);
-        stu1.setName(name);
-        stu1.setSex(sex);
-        stu1.setAge(age);
-        stu1.setPhone(phone);
-        boolean b = studentDao.addStudent(stu1);
-        String msg_addStu = "";
-        System.out.println("是否添加成功： " + b);
-        if (b){
-            //添加成功
-            msg_addStu = "1";
-            response.getWriter().println(msg_addStu);
-        }else {
-            msg_addStu = "0";
-            response.getWriter().println(msg_addStu);
+        //[BUG]:判断输入数据的正确性(正则表达式处理数据)
+
+        if((sex.equals("男") || sex.equals("女") || sex.equals("未知")) && (phone.length() == 11) ){
+            stu1.setStuId(stuId);
+            stu1.setName(name);
+            stu1.setSex(sex);
+            stu1.setAge(age);
+            stu1.setPhone(phone);
+            boolean b = studentDao.addStudent(stu1);
+            String msg_addStu = "";
+            System.out.println("是否添加成功： " + b);
+            if (b){
+                //添加成功
+                msg_addStu = "1";
+                response.getWriter().println(msg_addStu);
+            }else {
+                msg_addStu = "0";
+                response.getWriter().println(msg_addStu);
+            }
         }
     }
 

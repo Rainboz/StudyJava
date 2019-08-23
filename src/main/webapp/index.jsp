@@ -239,7 +239,7 @@
                 var str = "<form id=\"add_form_stu\" class=\"add_form\">\n" +
                     "            <p>\n" +
                     "                <label>学号: </label>\n" +
-                    "                <input type=\"text\" name=\"stuId\" value='' placeholder='学号'/>\n" +
+                    "                <input type=\"text\" name=\"stuId\" value='' placeholder='请输入8位整数'/>\n" +
                     "            </p>\n" +
                     "            <p>\n" +
                     "                <label>姓名</label>\n" +
@@ -247,15 +247,15 @@
                     "            </p>\n" +
                     "            <p>\n" +
                     "                <label>性别</label>\n" +
-                    "                <input type=\"text\" name=\"sex\" value='' placeholder='性别'/>\n" +
+                    "                <input type=\"text\" name=\"sex\" value='' placeholder='请输入性别'/>\n" +
                     "            </p>\n" +
                     "            <p>\n" +
                     "                <label>年龄</label>\n" +
-                    "                <input type=\"text\" name=\"age\" value='' placeholder='年龄'/>\n" +
+                    "                <input type=\"text\" name=\"age\" value='' placeholder='请输入3位以内的整数'/>\n" +
                     "            </p>\n" +
                     "            <p>\n" +
                     "                <label>手机号</label>\n" +
-                    "                <input type=\"text\" name=\"phone\" value='' placeholder='手机号'/>\n" +
+                    "                <input type=\"text\" name=\"phone\" value='' placeholder='请输入11位数'/>\n" +
                     "            </p>\n" +
                     "            <p >\n" +
                     "                <input id='confirm_add' type=\"button\" name=\"phone\" value='添加学生' />\n" +
@@ -296,9 +296,10 @@
                     if (data = 1){//添加成功
                         console.log("添加成功");
                         alert("添加成功");
-                    } else {
-                        alert("添加失败");
                     }
+                },
+                error:function (error) {
+                    alert("输入信息不合法");
                 }
             });
         }
