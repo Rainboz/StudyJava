@@ -138,8 +138,21 @@ public class StudentServlet extends HttpServlet {
         String sex = request.getParameter("sex");
         int age = Integer.parseInt(request.getParameter("age"));
         String phone = request.getParameter("phone");
-
-        //[BUG]:判断输入数据的正确性(正则表达式处理数据)
+        stu1.setStuId(stuId);
+        stu1.setName(name);
+        stu1.setSex(sex);
+        stu1.setAge(age);
+        stu1.setPhone(phone);
+        boolean b = studentDao.addStudent(stu1);
+        String msg_addStu = "";
+        System.out.println("是否添加成功： " + b);
+        if (b){
+            msg_addStu = "1";
+        }else {
+            msg_addStu = "0";
+        }
+        response.getWriter().println(msg_addStu);
+        /*//[BUG]:判断输入数据的正确性(正则表达式处理数据)
         String stuId_str = String.valueOf(stuId);
         if((sex.equals("男") || sex.equals("女") || sex.equals("未知")) && (phone.length() == 11) &&  (stuId_str.length()==8)){
             stu1.setStuId(stuId);
@@ -153,11 +166,10 @@ public class StudentServlet extends HttpServlet {
             if (b){
                 //添加成功
                 msg_addStu = "1";
-                response.getWriter().println(msg_addStu);
             }else {
                 msg_addStu = "0";
-                response.getWriter().println(msg_addStu);
             }
+            response.getWriter().println(msg_addStu);
         }else {
             String msg = "";
             if (!(sex.equals("男") || sex.equals("女") || sex.equals("未知"))){
@@ -175,7 +187,7 @@ public class StudentServlet extends HttpServlet {
             }
             response.getWriter().println(msg);
             System.out.println(msg);
-        }
+        }*/
     }
 
 }

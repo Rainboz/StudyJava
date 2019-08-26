@@ -296,19 +296,12 @@
                     if (data = 1){//添加成功
                         console.log("添加成功");
                         alert("添加成功");
+                    }else {
+                        alert("fail")
                     }
                 },
                 error:function (error) {
-                    if (error = 11){
-                        alert("性别不合法");
-                    }else if (error = 22){
-                        alert("手机号不合法");
-                    } else if (error = 33){
-                        alert("学号不合法");
-                    } else {
-                        alert("3处以上不合法，请仔细检查");
-                    }
-
+                    alert("error");
                 }
             });
         }
@@ -339,6 +332,10 @@
         .addStu p{
             text-align: center;
         }
+        #login_user{
+            float: right;
+            padding: 13px;
+        }
     </style>
 </head>
 <body>
@@ -348,6 +345,7 @@
         <div class="head_bar">
             <button id="addStudent" type="button" class="button" style="vertical-align: middle;font-size: 14px;">添加学生</button>
             <button type="button" class="button" style="vertical-align: middle;font-size: 14px;">隐藏</button>
+            <span id="login_user">当前登录用户:${sessionScope.loginUser.username}</span>
         </div>
     </div>
     <div class="student">

@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -68,7 +69,15 @@ public class LoginServlet extends HttpServlet {
             //登录成功
             System.out.println(user.toString());
             //out.println("<h1><font color='green'>Login success!登录成功</font></h1>");
-            out.println("<h1><font color='green'>你绿了！</font></h1>");
+//            out.println("<h1><font color='green'>你绿了！</font></h1>");
+
+            //登录用户设置到session中
+            HttpSession session = req.getSession();
+            session.setAttribute("loginUser",user);
+
+            //重定向至mian.jsp页面
+            resp.sendRedirect("index.jsp");
+
         } else {
             /**
              *登录失败:直接在登录页面提示
