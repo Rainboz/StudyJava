@@ -299,7 +299,16 @@
                     }
                 },
                 error:function (error) {
-                    alert("输入信息不合法");
+                    if (error = 11){
+                        alert("性别不合法");
+                    }else if (error = 22){
+                        alert("手机号不合法");
+                    } else if (error = 33){
+                        alert("学号不合法");
+                    } else {
+                        alert("3处以上不合法，请仔细检查");
+                    }
+
                 }
             });
         }

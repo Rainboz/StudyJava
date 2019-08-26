@@ -140,8 +140,8 @@ public class StudentServlet extends HttpServlet {
         String phone = request.getParameter("phone");
 
         //[BUG]:判断输入数据的正确性(正则表达式处理数据)
-
-        if((sex.equals("男") || sex.equals("女") || sex.equals("未知")) && (phone.length() == 11) ){
+        String stuId_str = String.valueOf(stuId);
+        if((sex.equals("男") || sex.equals("女") || sex.equals("未知")) && (phone.length() == 11) &&  (stuId_str.length()==8)){
             stu1.setStuId(stuId);
             stu1.setName(name);
             stu1.setSex(sex);
@@ -158,6 +158,23 @@ public class StudentServlet extends HttpServlet {
                 msg_addStu = "0";
                 response.getWriter().println(msg_addStu);
             }
+        }else {
+            String msg = "";
+            if (!(sex.equals("男") || sex.equals("女") || sex.equals("未知"))){
+//                msg = "性别不合法";
+                msg = "11";
+            }else if (!(phone.length() == 11) ){
+//                msg = "手机号不合法";
+                msg = "22";
+            }else if (!(stuId_str.length()==8)){
+//                msg = "学号不合法";
+                msg = "33";
+            }else {
+//                msg = "3处以上不合法，请仔细检查";
+                msg = "44";
+            }
+            response.getWriter().println(msg);
+            System.out.println(msg);
         }
     }
 
