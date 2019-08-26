@@ -1,6 +1,9 @@
 package com.rain.javaweb.login.servlet;
 
+import com.rain.javaweb.login.beans.Employee;
 import com.rain.javaweb.login.beans.User;
+import com.rain.javaweb.login.dao.EmployeeDao;
+import com.rain.javaweb.login.dao.EmployeeDaoImpl;
 import com.rain.javaweb.login.dao.UserDao;
 import com.rain.javaweb.login.dao.UserDaoImpl;
 
@@ -12,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 /**
  * @progrom StudyJava
@@ -75,8 +79,15 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("loginUser",user);
 
+            //查询所有员工信息
+            EmployeeDao employeeDao = new EmployeeDaoImpl();
+            List<Employee> list = employeeDao.selectAllEmps();
+
+            //转发前绑定数据
+            req.setAttribute("emps_list",list);
+            req.getRequestDispatcher("index.jsp").forward(req,resp);
             //重定向至mian.jsp页面
-            resp.sendRedirect("index.jsp");
+//            resp.sendRedirect("index.jsp");
 
         } else {
             /**

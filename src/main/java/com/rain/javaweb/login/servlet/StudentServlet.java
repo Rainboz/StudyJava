@@ -5,9 +5,8 @@ import com.rain.javaweb.login.beans.Student;
 import com.rain.javaweb.login.dao.StudentDao;
 import com.rain.javaweb.login.dao.StudentDaoImpl;
 
-import javax.servlet.RequestDispatcher;
+
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +20,6 @@ import java.util.List;
  * @Author rainboz
  * @Date 2019-08-22 下午4:51
  */
-@WebServlet(name = "StudentServlet")
 public class StudentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);

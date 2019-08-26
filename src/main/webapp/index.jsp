@@ -1,3 +1,6 @@
+<%@ page import="java.util.List" %>
+<%@ page import="com.rain.javaweb.login.beans.Employee" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: rainboz
@@ -13,10 +16,22 @@
     <link rel="stylesheet" type="text/css" href="css/student.css">
     <script>
         $(function () {
-
-           selectStuList();
-
+            selectStuList();
         });
+
+        function selectAllEmps() {
+
+            $.ajax({
+                url: "login",
+                type: "post",
+                data: {},
+                success: function (data) {
+
+                }
+            });
+
+        }
+
         function selectStuList() {
             var selectFlag = false;
             // $("#select").click(function () {
@@ -95,7 +110,7 @@
                     }
                 });
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
@@ -108,12 +123,12 @@
             console.log(stuId);
             //[功能1]:点击事件：点击修改按钮，显示修改信息列表(需要请求根据stuId查询方法)
             $.ajax({
-                url:"selectByStuId.do",
-                type:"post",
-                data:{"stuId":stuId},
+                url: "selectByStuId.do",
+                type: "post",
+                data: {"stuId": stuId},
                 // data:"method=selectByStuId&stuId="+stuId,
-                dataType:"json",
-                success:function (data) {
+                dataType: "json",
+                success: function (data) {
                     var update_sub_flag = false;
 
                     var strStu = JSON.stringify(data);
@@ -129,31 +144,31 @@
                     // 点击提交按钮，完成修改操作
                     var str = "<form id=\"update_form_stuId\" class=\"update_form\">\n" +
                         "            <p>\n" +
-                        "                <label>学号: </label>\n" +"<span id='stu_span'>"+stuId+"</span>"+
-                        "                <input hidden type=\"text\" name=\"stuId\" value='' placeholder='"+stuId+"'/>\n" +
+                        "                <label>学号: </label>\n" + "<span id='stu_span'>" + stuId + "</span>" +
+                        "                <input hidden type=\"text\" name=\"stuId\" value='' placeholder='" + stuId + "'/>\n" +
                         "            </p>\n" +
                         "            <p>\n" +
                         "                <label>姓名</label>\n" +
-                        "                <input type=\"text\" name=\"name\" value='' placeholder='"+name+"' />\n" +
+                        "                <input type=\"text\" name=\"name\" value='' placeholder='" + name + "' />\n" +
                         "            </p>\n" +
                         "            <p>\n" +
                         "                <label>性别</label>\n" +
-                        "                <input type=\"text\" name=\"sex\" value='' placeholder='"+sex+"'/>\n" +
+                        "                <input type=\"text\" name=\"sex\" value='' placeholder='" + sex + "'/>\n" +
                         "            </p>\n" +
                         "            <p>\n" +
                         "                <label>年龄</label>\n" +
-                        "                <input type=\"text\" name=\"age\" value='' placeholder='"+age+"'/>\n" +
+                        "                <input type=\"text\" name=\"age\" value='' placeholder='" + age + "'/>\n" +
                         "            </p>\n" +
                         "            <p>\n" +
                         "                <label>手机号</label>\n" +
-                        "                <input type=\"text\" name=\"phone\" value='' placeholder='"+phone+"'/>\n" +
+                        "                <input type=\"text\" name=\"phone\" value='' placeholder='" + phone + "'/>\n" +
                         "            </p>\n" +
                         "            <p >\n" +
                         "                <input id='confirm_update' type=\"button\" name=\"phone\" value='确认修改' />\n" +
                         "            </p>\n" +
                         "        </form>";
                     //添加html
-                    $(".updateStu").append(str);
+                    $("#changeStu").append(str);
 
                     //[功能2]:为"确认修改"绑定事件
                     $("#confirm_update").click(function () {
@@ -170,7 +185,7 @@
                         var phone_val = $("input[name='phone']").val();
                         //----------------------
 
-                        var str = '[{"stuId":'+stuId+',"name":'+name+',"sex":'+sex+',"age":'+age+',"phone":'+phone+'}]';
+                        var str = '[{"stuId":' + stuId + ',"name":' + name + ',"sex":' + sex + ',"age":' + age + ',"phone":' + phone + '}]';
                         var jsonStr = JSON.stringify(str);
                         var jsonObj = JSON.parse(jsonStr);
                         // console.log(str);
@@ -187,7 +202,7 @@
                          */
                         if (name_val != null && sex_val != null && age_val != null && phone_val != null &&
                             name_val != "" && sex_val != "" && age_val != "" && phone_val != "" &&
-                            name_val != undefined && sex_val != undefined && age_val != undefined && phone_val != undefined){
+                            name_val != undefined && sex_val != undefined && age_val != undefined && phone_val != undefined) {
                             //都不为空则能够提交修改
                             update_sub_flag = true;
                             console.log("信息完整");
@@ -197,12 +212,18 @@
                              * [BUG]:还是之前的问题，点击"修改"按钮,会出现多次调用updateStu()方法,页面会多次插入信息表
                              */
                             $.ajax({
-                                url:"updateStu.do",
-                                type:"post",
-                                data:{"stuId":stuId,"name":name_val,"sex":sex_val,"age":age_val,"phone":phone_val},
-                                success:function (data) {
+                                url: "updateStu.do",
+                                type: "post",
+                                data: {
+                                    "stuId": stuId,
+                                    "name": name_val,
+                                    "sex": sex_val,
+                                    "age": age_val,
+                                    "phone": phone_val
+                                },
+                                success: function (data) {
                                     console.log(data);
-                                    if (data = 1){
+                                    if (data = 1) {
                                         alert("更新成功！");
                                         //异步刷新数据
                                         /**
@@ -216,7 +237,7 @@
                                 }
                             });
 
-                        }else {
+                        } else {
                             //信息填写不完整，不允许提交修改,并提示没有填写的信息
                             console.log("信息填写不完整");
                             alert("信息填写不完整");
@@ -228,11 +249,12 @@
                         });
                     });
                 },
-                error:function (xhr) {
+                error: function (xhr) {
                     console.log(xhr.responseText);
                 }
             });
         }
+
         $(function () {
             $("#addStudent").click(function () {
                 // 点击提交按钮，完成添加操作
@@ -262,7 +284,7 @@
                     "            </p>\n" +
                     "        </form>";
                 //添加html
-                $(".addStu").append(str);
+                $("#addStu").append(str);
 
                 //提交
                 $("#confirm_add").click(function () {
@@ -289,52 +311,57 @@
             // console.log(age);
             // console.log(phone);
             $.ajax({
-                url:"addStudent.do",
-                type:"post",
-                data:{"stuId":stuId,"name":name,"sex":sex,"age":age,"phone":phone},
-                success:function (data) {
-                    if (data = 1){//添加成功
+                url: "addStudent.do",
+                type: "post",
+                data: {"stuId": stuId, "name": name, "sex": sex, "age": age, "phone": phone},
+                success: function (data) {
+                    if (data = 1) {//添加成功
                         console.log("添加成功");
                         alert("添加成功");
-                    }else {
+                    } else {
                         alert("fail")
                     }
                 },
-                error:function (error) {
+                error: function (error) {
                     alert("error");
                 }
             });
         }
+
     </script>
     <style>
-        .updateStu{
-            width: 30%;
-            margin: 0px auto;
-            border: 1pt solid #c0c0c0;
-        }
-        .updateStu p{
-            vertical-align:middle;
-            padding:10px 10px;
-        }
-        .update_form p{
+        .update_form p {
             text-align: center;
         }
 
-        .addStu{
+        .data_center {
             width: 30%;
             margin: 0 auto;
-            border: 1pt solid #c0c0c0;
+            border: 0pt solid #c0c0c0;
         }
-        .addStu p{
-            vertical-align:middle;
-            padding:10px 10px;
+
+        .data_center p {
+            vertical-align: middle;
+            padding: 10px 10px;
         }
-        .addStu p{
+
+        .data_center p {
             text-align: center;
         }
-        #login_user{
+
+        #login_user {
             float: right;
             padding: 13px;
+        }
+
+        #employee {
+            width: 100%;
+        }
+
+        #employee table {
+            width: 45%;
+            border: 1px solid #c0c0c0;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -343,7 +370,8 @@
 <section id="all" class="content">
     <div class="head">
         <div class="head_bar">
-            <button id="addStudent" type="button" class="button" style="vertical-align: middle;font-size: 14px;">添加学生</button>
+            <button id="addStudent" type="button" class="button" style="vertical-align: middle;font-size: 14px;">添加学生
+            </button>
             <button type="button" class="button" style="vertical-align: middle;font-size: 14px;">隐藏</button>
             <span id="login_user">当前登录用户:${sessionScope.loginUser.username}</span>
         </div>
@@ -362,37 +390,71 @@
         </table>
 
     </div>
-    <div class="updateStu">
-        <!--
-        <form id="update_form_stuId" class="update_form">
-            <p>
-                <label>学号</label>
-                <input type="text" name="stuId" value="" placeholder="stuId"/>
-            </p>
-            <p>
-                <label>姓名</label>
-                <input type="text" name="name" value="" placeholder="name" />
-            </p>
-            <p>
-                <label>性别</label>
-                <input type="text" name="sex" value="" placeholder="sex"/>
-            </p>
-            <p>
-                <label>年龄</label>
-                <input type="text" name="age" value="" placeholder="age"/>
-            </p>
-            <p>
-                <label>手机号</label>
-                <input type="text" name="phone" value="" placeholder="phone"/>
-            </p>
-            <p id="confirm_update">
-                <input type="button" name="phone" value="确认修改" />
-            </p>
-        </form>
-        -->
+    <div id="changeStu" class="data_center">
     </div>
-    <div class="addStu">
-
+    <div id="addStu" class="data_center">
+    </div>
+    <div id="employee" class="data_center">
+        <c:if test="${!empty emps_list}">
+            <table cellpadding="10" cellspacing="0">
+                <tr>
+                    <th>ID</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Operation</th>
+                </tr>
+                <!--
+                        c:forEach  循环迭代
+                        items   指定迭代的集合
+                        var     当前迭代的元素
+                -->
+                <c:forEach items="${emps_list}" var="emp">
+                    <tr>
+                        <td>${emp.id}</td>
+                        <td>${emp.lastName}</td>
+                        <td>${emp.email}</td>
+                        <td>${emp.gender==0?"女":"男"}</td>
+                        <td>${emp.dept.deptName}</td>
+                        <td>
+                            <a href="#">Edit</a>
+                            &nbsp;&nbsp;
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                </c:forEach>
+                <!--通过循环 显示 员工信息-->
+               <%-- <%
+                    //获取所有员工数据
+                    List<Employee> list = (List<Employee>) request.getAttribute("emps_list");
+                    for (Employee e : list) {
+                %>
+                <tr>
+                    <td><%=e.getId()%>
+                    </td>
+                    <td><%=e.getLastName()%>
+                    </td>
+                    <td><%=e.getEmail()%>
+                    </td>
+                    <td><%=e.getGender() == 0 ? "女" : "男"%>
+                    </td>
+                    <td><%=e.getDept().getDeptname()%>
+                    </td>
+                    <td>
+                        <a href="#">Edit</a>
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+                <%
+                    }
+                %>--%>
+            </table>
+        </c:if>
+        <c:if test="${empty emps_list}">
+            <h2 align="center"> 没有员工信息</h2>
+        </c:if>
+        <h3 align="center"><a herf="#">Add New Employee</a></h3>
     </div>
     <a hidden href="getStudentList.do">查询</a>
 </section>
