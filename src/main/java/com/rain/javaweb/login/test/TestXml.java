@@ -43,4 +43,8 @@ public class TestXml {
         Employee emp = (Employee)Class.forName(clsStr).newInstance();
         System.out.println(emp);
     }
+    @Test
+    public void testPath(){
+        System.out.println(System.getProperty("path"));
+    }
 }
