@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>  <!-- 根标记 -->
+	
+	<student>
+		<id>1001</id>
+		<name>Tom</name>
+		<gender>男</gender>
+	</student>
+	<student>
+		<id>1002</id>
+		<name>Jerry</name>
+		<gender>女</gender>
+	</student>
+	
+	<class>
+		<class-name>com.rain.javaweb.login.beans.Employee</class-name>
+	</class>
+
+</students>

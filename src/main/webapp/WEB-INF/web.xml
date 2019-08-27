@@ -7,7 +7,7 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-    
+
     <!--Filter-->
     <filter>
         <filter-name>LoginFilter</filter-name>
@@ -17,7 +17,7 @@
         <filter-name>LoginFilter</filter-name>
         <url-pattern>/index.jsp</url-pattern>
     </filter-mapping>
-    
+
     <!--Listener-->
     <listener>
         <listener-class>com.rain.javaweb.login.listener.MySessionListener</listener-class>
