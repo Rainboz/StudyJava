@@ -42,11 +42,11 @@
     $(function(){
         Victor("container", "output");   //登录背景函数
         // $("#entry_name").focus();
-        $(document).keydown(function(event){
+       /* $(document).keydown(function(event){
             if(event.keyCode==13){
-                $("#entry_btn").click();
+                //$("#entry_btn").click();
             }
-        });
+        });*/
         $("#entry_name").focus(function () {
             //js
             //var spanEle = document.getElementById("login_span");

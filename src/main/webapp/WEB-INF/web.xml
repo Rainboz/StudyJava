@@ -7,6 +7,22 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    
+    <!--Filter-->
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.rain.javaweb.login.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+    
+    <!--Listener-->
+    <listener>
+        <listener-class>com.rain.javaweb.login.listener.MySessionListener</listener-class>
+    </listener>
+
     <!--处理静态css,js,image等资源-->
     <servlet-mapping>
         <servlet-name>default</servlet-name>

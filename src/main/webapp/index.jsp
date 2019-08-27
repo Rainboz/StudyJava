@@ -373,7 +373,7 @@
             <button id="addStudent" type="button" class="button" style="vertical-align: middle;font-size: 14px;">添加学生
             </button>
             <button type="button" class="button" style="vertical-align: middle;font-size: 14px;">隐藏</button>
-            <span id="login_user">当前登录用户:${sessionScope.loginUser.username}</span>
+            <span id="login_user">当前登录用户:${sessionScope.loginUser.username}，当前在线<font>${applicationScope.count}</font>人</span>
         </div>
     </div>
     <div class="student">
