@@ -20,6 +20,8 @@ import java.io.IOException;
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
+        resp.setContentType("text/html;charset=utf-8");
         /**
          * 输入信息后提交--->一个注册的Servlet通过request对象获取用户名、密码--->调用Dao插入到数据库中
          */
@@ -29,7 +31,8 @@ public class RegisterServlet extends HttpServlet {
         //2.判断用户名是否可用
         UserDao userDao = new UserDaoImpl();
         User user = userDao.getUserByUsername(username);
-        System.out.println("username: "+username+" "+"password: "+password);
+        System.out.println("1username: "+username+" "+"1password: "+password);
+
         if (user != null) {
             //注册失败返回到注册页面，并进行提示！
             //转发

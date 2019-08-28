@@ -29,7 +29,7 @@ public class LoginFilter implements Filter {
         System.out.println("URI: " + uri);
         System.out.println("URL: " + url);
         //判断要过滤的请求
-        if (url.endsWith("/index.jsp")) {
+        if (url.endsWith("/index.jsp") || url.endsWith("/") ) {
             //过滤  引导去往登录页面
             response.sendRedirect("login.jsp");
         } else {

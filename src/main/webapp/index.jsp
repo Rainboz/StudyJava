@@ -11,7 +11,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Student</title>
+    <title>员工信息管理系统</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/student.css">
     <script>
